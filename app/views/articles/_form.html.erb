@@ -1,6 +1,6 @@
-<h1>Ecrire un nouvel article</h1>
+<%= form_for @article do |f| %>
 
- <% if @article.errors.any? %>
+  <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@article.errors.count, "error") %> prohibited
@@ -14,6 +14,18 @@
     </div>
   <% end %>
 
-<%= render 'form' %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
 
-<%= link_to 'Back', articles_path %>
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
