@@ -1,13 +1,15 @@
 
-<%= link_to 'New article', new_article_path %>
 
 
-<h1>Listing articles</h1>
+
+<h1>Liste des articles</h1>
+
+<div class="btn btn-danger"><%= link_to 'Ecrire un article', new_article_path %></div>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Titre</th>
+    <th>Contenu</th>
   </tr>
 
   <% @articles.each do |article| %>
@@ -22,6 +24,6 @@
     </tr>
   <% end %>
 
-  <%= link_to 'Back', articles_path %>
+
 
 </table>
