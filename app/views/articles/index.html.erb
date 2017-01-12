@@ -1,29 +1,19 @@
-
-
-
-
 <h1>Liste des articles</h1>
 
 <div class="btn btn-danger"><%= link_to 'Ecrire un article', new_article_path %></div>
 
-<table>
-  <tr>
-    <th>Titre</th>
-    <th>Contenu</th>
-  </tr>
 
   <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
+
+    <div class="card">
+      <%= article.title %>
+      <%= article.text %>
+      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Show', article_path(article) %>
+      <%= link_to 'Destroy', article_path(article),
             method: :delete,
-            data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+            data: { confirm: 'Are you sure?' } %>
+    </div>
   <% end %>
 
 
-
-</table>
