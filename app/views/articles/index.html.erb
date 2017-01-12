@@ -1,19 +1,27 @@
-<h1>Liste des articles</h1>
+<div class="container">
+  <div class="row">
+    <div class= "col-xs-12 col-md-8 col-md-offset-2 ">
 
-<div class="btn btn-danger"><%= link_to 'Ecrire un article', new_article_path %></div>
+
+      <div class="text-center"><h1>Mes derniers articles</h1></div>
+
+      <div class="btn btn-default"><%= link_to 'Ecrire un article', new_article_path %></div>
 
 
-  <% @articles.each do |article| %>
+        <% @articles.each do |article| %>
 
-    <div class="card">
-      <%= article.title %>
-      <%= article.text %>
-      <%= link_to 'Edit', edit_article_path(article) %>
-      <%= link_to 'Show', article_path(article) %>
-      <%= link_to 'Destroy', article_path(article),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
+          <div class="card">
+            <h3><%= article.title %></h3>
+            <p><%= article.text %></p>
+
+              <%= link_to 'Edit', edit_article_path(article) %>
+              <%= link_to 'Show', article_path(article) %>
+              <%= link_to 'Destroy', article_path(article),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+          </div>
+        <% end %>
     </div>
-  <% end %>
-
+  </div>
+</div>
 
