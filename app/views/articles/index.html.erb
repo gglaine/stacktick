@@ -3,7 +3,7 @@
     <div class= "col-xs-12 col-md-8 col-md-offset-2 ">
 
 
-      <div class="text-center"><h1>Mes derniers articles</h1></div>
+      <div class="text-center"><h2>Mes derniers articles</h2></div>
 
       <div class="btn btn-default"><%= link_to 'Ecrire un article', new_article_path %></div>
 
@@ -15,7 +15,8 @@
             <p><%= article.text %></p>
 
 
-              <%= link_to 'Show', article_path(article) %>
+
+              <%= link_to 'Voir en entier', article_path(article) %>
 
           </div>
         <% end %>
