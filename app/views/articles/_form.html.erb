@@ -1,30 +1,31 @@
-<%= form_for :article, url: articles_path do |f| %>
-
-   <% if @article.errors.any? %>
-      <div id="error_explanation">
-        <h3>
-          <%= pluralize(@article.errors.count, "erreur") %> ont empeché cet article d'être sauvé:
-        </h3>
-        <ul>
-          <% @article.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= form_for :article, url: articles_path, remote: true do |f| %>
+         <% if @article.errors.any? %>
+            <div id="error_explanation">
+              <h3>
+                <%= pluralize(@article.errors.count, "erreur") %> ont empeché cet article d'être sauvé:
+              </h3>
+              <ul>
+                <% @article.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
           <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+        <p>
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </p>
+        <p>
+          <%= f.label :text %><br>
+          <%= f.text_area :text %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,12 @@
 .card {
-  border: 2px solid silver;
+/*  border: 2px solid silver;*/
   border-radius: 3px;
   margin: 10px;
   padding-left: 15px;
   padding-top: 5px;
   padding-bottom: 10px;
+}
+
+.silverback {
+  background: silver;
 }
