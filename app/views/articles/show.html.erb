@@ -15,19 +15,14 @@
                 <strong>Commentaire:</strong> <br>
                 <%= comment.body %>
               </p>
+              <p>
+                <%= link_to 'Supprimer ce commentaire', [comment.article, comment],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+              </p>
             <% end %>
-          <h4>Ajouter un commentaire</h4>
-            <%= form_for([@article, @article.comments.build], remote: true) do |f| %>
-            <p>
-              <%= f.label :votre_pseudo %><br>
-              <%= f.text_field :commenter %>
-            </p>
-            <p>
-              <%= f.label :commentaire %><br>
-              <%= f.text_area :body %>
-            </p>
-                <%= f.submit %>
-          <% end %>
+
+          <%= render 'comments/form' %>
 
           <%= link_to 'Retour', articles_path %>
           <br>
