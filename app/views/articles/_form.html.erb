@@ -15,15 +15,15 @@
             </div>
           <% end %>
           <p>
-            <%= f.label :title %><br>
-            <%= f.text_field :title %>
+            <%= f.label :titre %><br>
+            <%= f.text_field :title, class: 'article-form-title' %>
           </p>
           <p>
-            <%= f.label :text %><br>
-            <%= f.text_area :text %>
+            <%= f.label :texte %><br>
+            <%= f.text_area :text, class: 'article-form-body' %>
           </p>
           <p>
-            <%= f.submit %>
+            <%= f.submit 'Envoyer', class: 'btn-submit' %>
           </p>
       <% end %>
     </div>
