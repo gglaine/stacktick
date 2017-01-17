@@ -11,7 +11,7 @@
             <div class="text-center">
               <h3><%= article.title %></h3>
               <p><%= article.text[0..55] %></p>
-              <p>#<%= article.id %> // <%= article.created_at %></p>
+              <p>Publié le <%= article.created_at.strftime("%d/%m/%Y") %></p>
               <%= link_to 'Voir en entier', article_path(article) %>
             </div>
           </div>
