@@ -1,31 +1,25 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <%= form_for :article, url: articles_path, remote: true do |f| %>
-         <% if @article.errors.any? %>
-            <div id="error_explanation">
-              <h3>
-                <%= pluralize(@article.errors.count, "erreur") %> ont empeché cet article d'être sauvé:
-              </h3>
-              <ul>
-                <% @article.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                <% end %>
-              </ul>
-            </div>
+<%= form_for :article, url: articles_path, remote: true do |f| %>
+   <% if @article.errors.any? %>
+      <div id="error_explanation">
+        <h3>
+          <%= pluralize(@article.errors.count, "erreur") %> ont empeché cet article d'être sauvé:
+        </h3>
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
           <% end %>
-          <p>
-            <%= f.label :titre %><br>
-            <%= f.text_field :title, class: 'article-form-title' %>
-          </p>
-          <p>
-            <%= f.label :texte %><br>
-            <%= f.text_area :text, class: 'article-form-body' %>
-          </p>
-          <p>
-            <%= f.submit 'Envoyer', class: 'btn-submit' %>
-          </p>
-      <% end %>
-    </div>
-  </div>
-</div>
+        </ul>
+      </div>
+    <% end %>
+    <p>
+      <%= f.label :titre %><br>
+      <%= f.text_field :title, class: 'article-form-title' %>
+    </p>
+    <p>
+      <%= f.label :texte %><br>
+      <%= f.text_area :text, class: 'article-form-body' %>
+    </p>
+    <p>
+      <%= f.submit 'Envoyer', class: 'btn-edit' %>
+    </p>
+<% end %>

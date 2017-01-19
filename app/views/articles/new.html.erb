@@ -1,11 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-4">
-
-        <h4>Ecrire un nouvel article</h4>
-
-        <%= render 'form' %>
-        <%= link_to 'Retour', articles_path %>
+<div class="wrapper-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="card">
+          <div class="text-center">
+            <h4>Ecrire un nouvel article</h4>
+            <%= render 'form' %>
+            <%= link_to 'Retour', articles_path %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

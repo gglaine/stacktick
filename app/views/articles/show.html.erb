@@ -6,10 +6,10 @@
           <div class="text-center">
             <h3><%= @article.title %></h3>
             <p><%= simple_format @article.text %></p>
-            <%= link_to 'Editer', edit_article_path(@article) %>
-            <%= link_to 'Supprimer', article_path(@article),
+            <%= link_to 'Edit', edit_article_path(@article), class: 'btn-edit' %>
+            <%= link_to 'Delete', article_path(@article),
               method: :delete,
-              data: { confirm: 'Etes vous sur de vouloir supprimer l\'article ?' } %>
+              data: { confirm: 'Etes vous sur de vouloir supprimer l\'article ?' }, class: 'btn-edit' %>
               <div class="comments-box">
                 <h4>Commentaires</h4>
                   <% @article.comments.each do |comment| %>
@@ -28,8 +28,8 @@
                   <% end %>
               </div>
             <%= render 'comments/form' %>
-
-            <%= link_to 'Retour', articles_path %>
+<br>
+            <%= link_to 'Retour', articles_path, class: 'btn-edit' %>
             <br>
           </div>
         </div>
