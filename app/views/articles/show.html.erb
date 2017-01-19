@@ -1,35 +1,36 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <div class="card">
-        <div class="text-center">
-          <h3><%= @article.title %></h3>
-          <p><%= @article.text %></p>
-          <%= link_to 'Editer l\'article', edit_article_path(@article) %>
-          <h4>Commentaires</h4>
-            <% @article.comments.each do |comment| %>
-              <p>
-                <strong>Pseudo : <%= comment.commenter %> </strong>
-              </p>
-              <p>
-                <strong>Commentaire:</strong> <br>
-                <%= comment.body %>
-              </p>
-              <p>
-                <%= link_to 'Supprimer ce commentaire', [comment.article, comment],
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-              </p>
-            <% end %>
+<div class="wrapper-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="card">
+          <div class="text-center">
+            <h3><%= @article.title %></h3>
+            <p><%= simple_format @article.text %></p>
+            <%= link_to 'Editer', edit_article_path(@article) %>
+            <%= link_to 'Supprimer', article_path(@article),
+              method: :delete,
+              data: { confirm: 'Etes vous sur de vouloir supprimer l\'article ?' } %>
+              <div class="comments-box">
+                <h4>Commentaires</h4>
+                  <% @article.comments.each do |comment| %>
+                    <p>
+                      <strong>Pseudo : <%= comment.commenter %> </strong>
+                    </p>
+                    <p>
+                      <strong>Commentaire:</strong> <br>
+                      <%= comment.body %>
+                    </p>
+                    <p>
+                      <%= link_to 'Supprimer ce commentaire', [comment.article, comment],
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+                    </p>
+                  <% end %>
+              </div>
+            <%= render 'comments/form' %>
 
-          <%= render 'comments/form' %>
-
-          <%= link_to 'Retour', articles_path %>
-          <br>
-          <div class="btn btn-danger">
-            <%= link_to 'Supprimer l\'article', article_path(@article),
-            method: :delete,
-            data: { confirm: 'Etes vous sur de vouloir supprimer l\'article ?' } %>
+            <%= link_to 'Retour', articles_path %>
+            <br>
           </div>
         </div>
       </div>

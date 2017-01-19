@@ -1,12 +1,13 @@
 .btn-new-article {
-  background: silver;
-  color: #FFFFFF;
-  border: 1px solid #999999;
+  background: #FFFFFF;
+  max-width: 200px;
   padding: 8px 10px;
-  border-radius: 50px;
+  border-radius: 4px;
   font-size: 22px;
   font-weight: lighter;
   opacity: 0.85;
+  text-decoration: none;
+  margin: auto;
 }
 .btn-new-article:hover {
   opacity: 1;

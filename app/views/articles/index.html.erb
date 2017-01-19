@@ -1,22 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class= "col-xs-12 col-md-8 col-md-offset-2 ">
-      <div class="text-center">
-        <div class="btn-new-article">
-          <%= link_to 'Ecrire un article', new_article_path %>
-        </div>
-      </div>
-        <% @articles.each do |article| %>
-          <div class="card">
-            <div class="text-center">
-              <h3><%= article.title %></h3>
-              <p><%= article.text[0..55] %></p>
-              <p>Publié le <%= article.created_at.strftime("%d/%m/%Y") %></p>
-              <%= link_to 'Voir en entier', article_path(article) %>
-            </div>
+<div class="wrapper-grey">
+  <div class="container">
+    <div class="row">
+      <div class= "col-xs-12 col-md-8 col-md-offset-2 ">
+        <div class="text-center">
+          <div class="btn-new-article">
+            <%= link_to 'Ecrire un article', new_article_path %>
           </div>
-        <% end %>
+        </div>
+          <% @articles.each do |article| %>
+            <div class="card">
+              <div class="text-center text-justify">
+                <h3><%= article.title.capitalize %></h3>
+                <p>Publié le <%= article.created_at.strftime("%d/%m/%Y") %></p>
+                <p><%= simple_format article.text.capitalize %></p>
+                <div class="show-more">
+                  <%= link_to 'Voir en entier', article_path(article) %>
+                </div>
+                <div class="fadeout"></div>
+              </div>
+            </div>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
-

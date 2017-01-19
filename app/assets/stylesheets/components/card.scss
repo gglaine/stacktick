@@ -1,17 +1,53 @@
 .card {
 /*  border: 2px solid silver;*/
-  background: #ccc;
+  position: relative;
+  background: #F6F8FF;
   border-radius: 3px;
   margin: 10px;
   padding-left: 15px;
   padding-top: 5px;
   padding-bottom: 10px;
   font-family: 'Nunito', sans-serif;
-  opacity: 0.8;
+  opacity: 0.90;
+  background: -webkit-gradient(radial, 20% 80%, 0, 20% 80%, 350, from(#F6F8FF), to(#fff));
 }
 
+.card p {
+  max-width: 90%;
+  overflow: auto;
+}
+
+
 .card:hover {
-  background: silver;
+  background: #FCF7F8;
   opacity: 1;
 }
 
+.show-more {
+  padding-top: 10px;
+}
+
+.fadeout {
+    bottom: 6em;
+    height: 6em;
+    background: -webkit-linear-gradient(
+        rgba(122, 122, 122, 0) 0%,
+        rgba(122, 122, 122, 1) 100%
+    );
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
