@@ -10,7 +10,7 @@
           <% @articles.each do |article| %>
             <div class="card">
               <div class="text-center text-justify">
-                <h3><%= article.title.capitalize %></h3>
+                <h1><%= article.title.capitalize %></h1>
                 <p>Publié le <%= article.created_at.strftime("%d/%m/%Y") %></p>
                 <p><%= simple_format article.text.capitalize %></p>
                 <div class="show-more">
