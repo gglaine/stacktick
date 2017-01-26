@@ -1,12 +1,8 @@
 <div class="wrapper-grey">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class= "col-xs-12 col-md-8 col-md-offset-2 ">
-        <div class="text-center">
-          <div class="btn-new-article">
-            <%= link_to 'Ecrire un article', new_article_path %>
-          </div>
-        </div>
+      <div class= "col-xs-12 col-md-6 col-md-offset-2 ">
+        <h4>Latest</h4>
           <% @articles.each do |article| %>
             <div class="card">
               <div class="text-center text-justify">
@@ -23,6 +19,17 @@
               </div>
             </div>
           <% end %>
+      </div>
+      <div class="col-md-4">
+        <h4>All articles</h4>
+        <% @articles.each do |article| %>
+          <div class="card-side">
+            <ul>
+              <li><h5><%= article.title.capitalize %></h5></li>
+            </ul>
+          </div>
+        <% end %>
+
       </div>
     </div>
   </div>

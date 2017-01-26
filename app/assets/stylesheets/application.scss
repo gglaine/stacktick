@@ -19,7 +19,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "materialize";
+
 @import "font-awesome";
 
 
@@ -31,9 +31,15 @@
   margin-top: 50px;
 }
 
+.row {
+  background: #30343F;
+  margin: 0px;
+  width: 100%;
+}
 
 .container {
   max-width: 970px;
   margin: 0 auto;
 }
+
 

@@ -46,12 +46,12 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog navbar-fixed-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog navbar-bigblog-link" %>
 
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "New article"), new_article_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog navbar-fixed-button btn" %>
+    <%= link_to t(".top_call_to_action", default: "New article"), new_article_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog-button btn" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
