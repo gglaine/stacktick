@@ -41,7 +41,7 @@
 
 .card-side {
   position: relative;
-  background: silver;
+  background: #FFFFFF;
   border-radius: 3px;
   margin: 10px;
   padding-left: 5px;
@@ -51,6 +51,7 @@
   font-family: 'Nunito', sans-serif;
   opacity: 0.90;
   h5 {
+    color: silver;
     font-size: 13px;
   }
 }
@@ -58,4 +59,7 @@
 .card-side:hover {
   background: transparent;
   border: 1px groove silver;
+  p {
+    color: #FFFFFF;
+  }
 }

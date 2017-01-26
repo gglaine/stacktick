@@ -1,12 +1,12 @@
 /* Main class */
 .navbar-bigblog {
   font-family: 'Nunito', sans-serif;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
   display: flex;
-  height: 70px;
-  padding: 0px 30px;
+  height: 60px;
+  padding: 0px 15px;
+  padding-top: 5px;
   align-items: center;
   justify-content: space-between;
 }
@@ -20,29 +20,40 @@
   width: 100%;
 }
 
-/* Navbar logo */
-.navbar-bigblog-brand img {
-  width: 50px;
+.navbar-fixed-item {
+  height: 40px;
+}
+
+/* Navbar Brand */
+.navbar-fixed-brand {
+  height: 50px;
 }
 
 /* Navbar right section (with form, links, button) */
-.navbar-bigblog-right {
+.navbar-fixed-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
+  padding-right: 0px;
+  margin-right: 0px;
 }
 
 /* Navbar item */
 .navbar-bigblog-item {
   flex: 0 1 auto;
   cursor: pointer;
-  padding: 0 20px;
+  padding: 5 20px;
+  height: 20px;
 }
 
 /* Navbar standard link */
 .navbar-bigblog-link {
-  color: #616668;
+  background: #334762;
+  color: white;
   font-size: 12px;
+  height: 40px;
+  border-radius: 3px;
 }
 .navbar-bigblog-link:hover {
   color: #da552f;
@@ -52,13 +63,12 @@
 /* Navbar right button */
 .navbar-bigblog-button {
   margin-left: 10px;
-  padding: 0 20px;
-  border-radius: 20em;
-  line-height: 40px;
-  background-color: #D23333;
-  color: red;
+  padding: 7 10px;
+  border-radius: 3px;
+  line-height: 17px;
   font-size: 14px;
   border: 2px solid #D23333;
+  height: 40px;
 }
 .navbar-bigblog-button:hover {
   color: red;

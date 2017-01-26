@@ -1,7 +1,6 @@
 <div class="navbar-bigblog navbar-bigblog-fixed">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-bigblog navbar-fixed-brand" do %>
-    <% image_tag "logo.png" %>
     <h5>My Litte Big Blog</h5>
   <% end %>
 
@@ -46,12 +45,12 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog navbar-bigblog-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog-link" %>
 
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "New article"), new_article_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog-button btn" %>
+    <%= link_to t(".top_call_to_action", default: "New article"), new_article_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog-button btn-success" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

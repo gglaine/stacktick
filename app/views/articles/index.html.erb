@@ -25,7 +25,10 @@
         <% @articles.each do |article| %>
           <div class="card-side">
             <ul>
-              <li><h5><%= article.title.capitalize %></h5></li>
+              <li>
+                <h5>#<%= article.id %> <%= article.title.capitalize %> </h5>
+                <p><%= article.created_at.strftime("%d/%m/%Y à %H:%M  ") %></p>
+              </li>
             </ul>
           </div>
         <% end %>
