@@ -36,7 +36,6 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    render 'new'
   end
 
   def destroy

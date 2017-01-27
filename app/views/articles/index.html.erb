@@ -8,7 +8,7 @@
               <div class="text-center text-justify">
                 <h1><%= article.title.capitalize %></h1>
                 <p>Publié le <%= article.created_at.strftime("%d/%m/%Y") %></p>
-                <p><%= simple_format article.text.capitalize %></p>
+                <p><%= simple_format article.text.capitalize.split("\n", 2)[0] %></p>
               </div>
               <div class="text-center">
                 <%= link_to '<i class="fa fa-plus"></i><p>Voir l\'article entier</p>'.html_safe, article_path(article) %>
