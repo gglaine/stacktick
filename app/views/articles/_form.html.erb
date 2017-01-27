@@ -1,4 +1,4 @@
-<%= form_for :article, url: article_path(@article), method: :patch, remote: true do |f| %>
+<%= form_for :article, url: articles_path do |f| %>
    <% if @article.errors.any? %>
       <div id="error_explanation">
         <h3>
