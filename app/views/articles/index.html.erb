@@ -9,9 +9,20 @@
                 <h1><%= article.title.capitalize %></h1>
                 <p>Publié le <%= article.created_at.strftime("%d/%m/%Y") %></p>
                 <p><%= simple_format article.text.capitalize %></p>
-                <div class="show-more">
+                <div class="show-full-article">
                   <%= link_to 'Voir en entier', article_path(article) %>
                 </div>
+                <p><%= article.comments.count %> commentaires</p>
+                <div class="show-comments">Voir les commentaires</div>
+                  <div class="article-comments">
+                    <% article.comments.each do |comment| %>
+                        <p>
+                          <strong><div class="comment-body"><%= comment.commenter %></div></strong>
+                          <%= comment.body.capitalize %>
+                        </p>
+                    <% end %>
+                </div>
+
                 <div class="social-links">
                   <i class="fa fa-facebook"></i>
                   <i class="fa fa-twitter"></i>
@@ -19,6 +30,7 @@
               </div>
             </div>
           <% end %>
+
       </div>
       <div class="col-md-4">
         <h4>All articles</h4>

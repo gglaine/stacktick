@@ -1,6 +1,7 @@
-// $(document).ready(function(){
-//   $('.card').hover(function() {
-//     $(this).toggleClass("silverback");
-//   });
-// });
+$(document).ready(function(){
+  $('.article-comments').hide();
+  $('.show-comments').click(function() {
+    $('.article-comments').slideToggle();
+  });
+});
 
