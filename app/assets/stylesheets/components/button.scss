@@ -55,9 +55,40 @@
   opacity: 0.9;
 }
 
-.show-full-article {
-  border: 1px solid silver;
-  border-radius: 3px;
+.btn-full-article {
+  width: 120px;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background: #334762;
+  transition: background 0.3s ease;
+  opacity: 0.9;
+  a {
+    color: silver;
+  }
+}
+.btn-full-article:hover {
+  opacity: 1;
+  background: #334762;
+  text-decoration: none;
+  color: silver;
+  text-decoration: none;
+}
+
+.btn-show-comments {
+  color: #999999;
+  border: 1px solid #999999;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-weight: lighter;
+  opacity: 0.6;
+  width: 140px;
+  font-size: 11px;
+}
+.btn-show-comments:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
 }
 
 

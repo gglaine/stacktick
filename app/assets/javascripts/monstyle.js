@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.article-comments').hide();
-  $('.show-comments').click(function() {
+  $('.btn-show-comments').click(function() {
     $('.article-comments').slideToggle();
   });
 });
