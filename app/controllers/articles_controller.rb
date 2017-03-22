@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @articles = Article.all.order('created_at DESC')
+    @articles = Article.all.order('created_at DESC').page params[:page]
   end
 
   def new
@@ -17,8 +17,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # @article = Article.new(article_params)
-    @article = current_user.articles.build(params[:article])
+    @article = Article.new(article_params)
+    # @article = current_user.articles.build(params[article_params])
 
     if @article.save
       redirect_to @article

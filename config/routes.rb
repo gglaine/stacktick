@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
   resources :users
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  resources :categories
 
   get 'welcome/index'
 
