@@ -10,10 +10,11 @@
 require 'faker'
 
 # Creating 100 fake articles
-30.times do
+5.times do
   article = Article.new(
-    title:    Faker::ChuckNorris.fact,
-    text: "#{Faker::Lorem.paragraph(3)}",
+    title:   Faker::Company.catch_phrase,
+    text: "#{Faker::Lorem.paragraph(5)}",
+    preview: "#{Faker::Lorem.paragraph(1)}"
   )
   article.save!
 end

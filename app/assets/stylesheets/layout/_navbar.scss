@@ -1,7 +1,7 @@
 /* Main class */
 .navbar-bigblog {
   font-family: 'Nunito', sans-serif;
-  background: #EEE1E9;
+  background: #FBFCFD;
   transition: all 0.3s ease;
   display: flex;
   height: 60px;
@@ -11,11 +11,12 @@
   padding-right: 15px;
   align-items: center;
   justify-content: space-between;
-  color: #D81E5B;
+  opacity: 0.95;
+  border-bottom: 1px solid #E1E1E1;
 }
 
 .navbar-bigblog h1 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 /* Optional class to fix the navbar on top */
@@ -27,21 +28,35 @@
   width: 100%;
 }
 
-.navbar-fixed-item {
-  height: 40px;
-}
+// .navbar-fixed-item {
+//   height: 40px;
+// }
 
 /* Navbar Brand */
-.navbar-fixed-brand {
-  height: 50px;
+// .navbar-fixed-brand {
+//   height: 50px;
+// }
+
+.navbar-fixed-brand h1 {
+  font-size: 14px;
 }
+
+.navbar-fixed-brand img {
+  width: 60px;
+  padding-right: 12px;
+}
+
+.navbar-fixed-brand h1 {
+  line-height: 1;
+
+}
+
 
 /* Navbar right section (with form, links, button) */
 .navbar-fixed-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
   padding-right: 0px;
   margin-right: 0px;
 }

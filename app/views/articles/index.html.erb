@@ -1,57 +1,53 @@
 <div class="wrapper-grey">
   <div class="container-fluid">
     <div class="row">
-      <div class= "col-xs-12 col-md-6 col-md-offset-2 ">
-        <h4>Latest</h4>
-        <div class="card">
-        <%= paginate @articles %>
-          </div>
-          <% @articles.each do |article| %>
-
-            <div class="card">
-              <div class="text-center text-justify">
-                <h1><%= article.title.capitalize %></h1>
-
-
-                <p>Publié le <%= article.created_at.strftime("%d/%m/%Y") %></p>
-                <p><%= simple_format article.text.capitalize.split("\n", 2)[0] %></p>
-              </div>
-              <div class="text-center">
-                <%= link_to '<i class="fa fa-plus"></i><p>Voir l\'article entier</p>'.html_safe, article_path(article) %>
-              </div>
-              <p><%= article.comments.count %> commentaires</p>
-              <div class="btn-show-comments">
-                Voir les commentaires
-              </div>
-              <div class="article-comments">
-                <% article.comments.each do |comment| %>
-                    <p>
-                      <strong><div class="comment-body"><%= comment.commenter %></div></strong>
-                      <%= comment.body.capitalize %>
-                    </p>
-                <% end %>
-              </div>
-              <div class="social-links">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
+      <div class= "col-xs-12 col-md-8">
+        <div class="card-article-header-top">
+          <h3>Derniers articles</h3>
+        </div>
+        <% @articles.each do |article| %>
+          <%= link_to article_path(article) do %>
+            <div class="row">
+              <div class="card-article">
+                <div class="col-xs-12 col-md-4">
+                  <div class="img-responsive">
+                    <%= cl_image_tag article.photo.url(:card_pic) %>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-8">
+                  <div class="card-article-content">
+                    <h1><%= article.title.capitalize %></h1>
+                    <h2><%= article.preview %></h2>
+                    <p><%= article.created_at.strftime("%d/%m/%Y") %></p>
+                      <div class="card-article-share">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i> <%= article.comments.count %>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                      </div>
+                  </div>
+                </div>
               </div>
             </div>
-          <% end %>
-
+          <%end %>
+        <% end %>
       </div>
       <div class="col-md-4">
-        <h4>All articles</h4>
-        <% @articles.each do |article| %>
-          <div class="card-side">
-            <ul>
-              <li>
-                <h5>#<%= article.id %> <%= article.title.capitalize %> </h5>
-                <p><%= article.created_at.strftime("%d/%m/%Y à %H:%M  ") %></p>
-              </li>
-            </ul>
-          </div>
-        <% end %>
-
+        <div class="card-article-header-top">
+          <h3>Articles populaires</h3>
+        </div>
+      <% @articles.each do |article| %>
+        <div class="card-article-mini">
+          <ul>
+            <li>
+            <%= link_to article_path(article) do %>
+              <h1><%= article.title.capitalize %> </h1>
+              <%= cl_image_tag article.photo.url(:sidebar_pic) %>
+              <p>Publié le <%= article.created_at.strftime("%d/%m/%Y à %H""H""%M  ") %></p>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
       </div>
     </div>
   </div>

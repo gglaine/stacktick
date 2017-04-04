@@ -1,7 +1,7 @@
 <div class="navbar-bigblog navbar-bigblog-fixed">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-bigblog navbar-fixed-brand" do %>
-    <h1>ninjagogo</h1>
+    <%= image_tag('ninja-logo.png')%> <h1>The Art of Code</h1>
   <% end %>
 
   <!-- Right Navigation -->
@@ -13,10 +13,7 @@
       <!-- Notification -->
       <%= link_to "#", class: "navbar-bigblog navbar-fixed-item navbar-bigblog navbar-fixed-link" do %>
         <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
           <h5>welcome <%= current_user[:username] %></h5>
-
         </div>
       <% end %>
 
@@ -51,8 +48,6 @@
 
     <% end %>
 
-    <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "New article"), new_article_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog-button btn-success" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

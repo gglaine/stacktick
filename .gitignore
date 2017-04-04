@@ -15,3 +15,14 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+log/*.log
+tmp/**/*
+tmp/*
+*.swp
+.DS_Store
+public/assets
+
+# Ignore application configuration
+/config/application.yml
+/config/cloudinary.yml

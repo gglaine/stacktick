@@ -5,11 +5,9 @@
         <div class="card">
           <div class="text-center">
             <h3><%= @article.title %></h3>
+            <%= cl_image_tag @article.photo.url(:full_width) %>
+            <%= @article.preview %>
             <p><%= simple_format @article.text %></p>
-            <%= link_to 'Edit', edit_article_path(@article), class: 'btn-edit' %>
-            <%= link_to 'Delete', article_path(@article),
-              method: :delete,
-              data: { confirm: 'Etes vous sur de vouloir supprimer l\'article ?' }, class: 'btn-edit' %>
               <div class="comments-box">
                 <h4>Commentaires</h4>
                   <% @article.comments.each do |comment| %>
@@ -19,11 +17,6 @@
                     <p>
                       <strong>Commentaire:</strong> <br>
                       <%= comment.body %>
-                    </p>
-                    <p>
-                      <%= link_to 'Supprimer ce commentaire', [comment.article, comment],
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' } %>
                     </p>
                   <% end %>
               </div>

@@ -16,8 +16,16 @@
       <%= f.text_field :title, class: 'article-form-title' %>
     </p>
     <p>
+      <%= f.label :preview %><br>
+      <%= f.text_field :preview, class: 'article-form-title' %>
+    </p>
+    <p>
       <%= f.label :texte %><br>
       <%= f.text_field :text, class: 'article-form-body' %>
+    </p>
+    <p>
+      <%= f.file_field :photo %>
+      <%= f.hidden_field :photo_cache %>
     </p>
     <p>
       <%= f.submit 'Envoyer' %>

@@ -1,18 +1,22 @@
 .wrapper-grey {
-  background: transparent;
-  padding: 20px 0;
+  background: #4b4b4b;
+  width: 100%;
   margin-top: 50px;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
+.container-fluid {
+  max-width: 90%;
+  background: #FFFFFF;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 
 .row {
-  background: #DBD7DA;
-  margin: 0px auto;
+  background: #FFFFFF;
   width: 100% !important;
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 0px;
 }
 
 ul {
@@ -22,4 +26,9 @@ ul {
 .img-circle {
   border: 2px solid black;
   border-radius: 50px;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
 }
