@@ -2,30 +2,35 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <div class="card">
-          <div class="text-center">
-            <h3><%= @article.title %></h3>
-            <%= cl_image_tag @article.photo.url(:full_width) %>
-            <%= @article.preview %>
-            <p><%= simple_format @article.text %></p>
-              <div class="comments-box">
-                <h4>Commentaires</h4>
-                  <% @article.comments.each do |comment| %>
-                    <p>
-                      <strong>Pseudo : <%= comment.commenter %> </strong>
-                    </p>
-                    <p>
-                      <strong>Commentaire:</strong> <br>
-                      <%= comment.body %>
-                    </p>
-                  <% end %>
-              </div>
-            <%= render 'comments/form' %>
+        <div class="text-center">
+          <h3><%= @article.title %></h3>
+          <%= cl_image_tag @article.photo.url(:full_width) %>
+          <%= @article.preview %>
+          <p><%= simple_format @article.text %></p>
+        </div>
+
+        <h4>Commentaires</h4>
+           <div class="comments-list">
+              <% @article.comments.each do |comment| %>
+            <ul>
+              <li>
+                <div class="pseudo-box">
+                  <strong><%= comment.commenter %></strong>
+                </div>
+                <p> <%= comment.body %></p>
+              </li>
+            </ul>
+              <% end %>
+          </div>
+
+          <div class="comments-box">
+              <%= render 'comments/form' %>
+            </div>
             <br>
-            <%= link_to 'Retour', articles_path, class: 'btn-edit' %>
+              <%= link_to 'Retour', articles_path, class: 'btn-edit' %>
             <br>
           </div>
-        </div>
+
       </div>
     </div>
   </div>

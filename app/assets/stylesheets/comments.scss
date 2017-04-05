@@ -4,10 +4,24 @@
 
 
 .comments-box {
-  border-top: 2px solid #ccc;
+
   border-bottom: 2px solid #ccc;
-  margin-top: 5px;
+  margin-top: 15px;
   padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.comments-list {
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  p {
+  display: inline;
+  padding-left: 20px;
+  }
+}
+
+.pseudo-box {
+  width: 300px;
 }
 
 

@@ -19,6 +19,7 @@
                     <h1><%= article.title.capitalize %></h1>
                     <h2><%= article.preview %></h2>
                     <p><%= article.created_at.strftime("%d/%m/%Y") %></p>
+
                       <div class="card-article-share">
                         <i class="fa fa-comment-o" aria-hidden="true"></i> <%= article.comments.count %>
                         <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -42,7 +43,6 @@
             <%= link_to article_path(article) do %>
               <h1><%= article.title.capitalize %> </h1>
               <%= cl_image_tag article.photo.url(:sidebar_pic) %>
-              <p>Publié le <%= article.created_at.strftime("%d/%m/%Y à %H""H""%M  ") %></p>
             </li>
             <% end %>
           </ul>

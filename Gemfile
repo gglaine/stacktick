@@ -43,6 +43,7 @@ gem 'faker'
 gem 'kaminari'
 gem 'carrierwave', '~> 1.0'
 gem 'cloudinary'
+gem 'attachinary'
 
 
 group :development, :test do

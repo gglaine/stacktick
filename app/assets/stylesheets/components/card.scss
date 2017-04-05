@@ -122,9 +122,15 @@
   font-family: 'Nunito', sans-serif;
   opacity: 0.90;
   h1 {
-    color: silver;
     font-size: 16px;
   }
+  ul {
+    padding-left: 0px;
+  }
+}
+
+.card-article-mini img {
+  width: 230px;
 }
 
 .card-article-side:hover {
