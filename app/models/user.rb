@@ -3,11 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   #
   has_many :articles
+  has_many :comments
 
-  has_attachment  :avatar, accept: [:jpg, :png, :gif]
+  mount_uploader :avatar, AvatarUploader
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  attr_accessor :avatar_cache, :avatar
 
 
 # Callbacks --------------------

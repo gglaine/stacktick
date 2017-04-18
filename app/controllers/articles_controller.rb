@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 
   # http_basic_authenticate_with name: "stevewozniak", password: "applepie1984", except: [:index, :show]
 
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @articles = Article.all.order('created_at DESC').page params[:page]
@@ -38,6 +38,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @user = current_user
     @article = Article.find(params[:id])
   end
 

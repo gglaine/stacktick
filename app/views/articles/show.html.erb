@@ -11,11 +11,12 @@
 
         <h4>Commentaires</h4>
            <div class="comments-list">
-              <% @article.comments.each do |comment| %>
+              <% @article.comments.order('created_at DESC').each do |comment| %>
             <ul>
               <li>
                 <div class="pseudo-box">
                   <strong><%= comment.commenter %></strong>
+
                 </div>
                 <p> <%= comment.body %></p>
               </li>
@@ -23,9 +24,11 @@
               <% end %>
           </div>
 
-          <div class="comments-box">
-              <%= render 'comments/form' %>
-            </div>
+
+            <%= render 'comments/form' %>
+
+
+
             <br>
               <%= link_to 'Retour', articles_path, class: 'btn-edit' %>
             <br>
