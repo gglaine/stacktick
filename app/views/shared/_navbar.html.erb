@@ -1,44 +1,33 @@
-<div class="navbar-bigblog navbar-bigblog-fixed">
+<div class="navbar-wagon navbar-wagon-fixed">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-bigblog navbar-fixed-brand" do %>
-    <%= image_tag('ninja-logo.png')%> <h1>My Litte Big Blog</h1>
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "plume.png" %> <h1> My Little Big Blog </h1>
   <% end %>
 
   <!-- Right Navigation -->
-  <div class="navbar-bigblog navbar-fixed-right hidden-xs hidden-sm">
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-bigblog navbar-fixed-item navbar-bigblog navbar-fixed-link" do %>
-        <div class="badge-container">
-          <h5>Bienvenue <%= current_user[:username] %></h5>
-          <%= current_user.avatar %>
-        </div>
-      <% end %>
-
       <!-- Profile picture and dropdown -->
-      <div class="navbar-bigblog navbar-fixed-item">
+      <div class="navbar-wagon-item">
         <div class="dropdown">
-        <% if current_user.avatar? %>
-            <%= cl_image_tag(current_user.avatar.path, { size: '50x50', crop: :thumb, gravity: :face }) %>
-        <% end %>
-          <%= image_tag "avatar_guillaume.png", class: "avatar dropdown-toggle", id: "navbar-bigblog navbar-fixed-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-bigblog navbar-fixed-dropdown-menu">
+          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to edit_user_registration_path(current_user) do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Mon profil") %>
+              <%= link_to "#" do %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
               <% end %>
             </li>
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Accueil") %>
+                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Déconnexion") %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
             </li>
           </ul>
@@ -48,17 +37,19 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-bigblog navbar-fixed-item navbar-bigblog-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
 
+    <!-- Button (call-to-action) -->
+    <%= link_to t(".top_call_to_action", default: "Subscribe"), "#", class: "btn-subscribe" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-bigblog navbar-fixed-item hidden-md hidden-lg">
+  <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-bigblog navbar-fixed-dropdown-menu">
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><a href="#">Some mobile link</a></li>
         <li><a href="#">Other one</a></li>
         <li><a href="#">Other one</a></li>
