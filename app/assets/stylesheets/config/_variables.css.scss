@@ -2,12 +2,18 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url('https://fonts.googleapis.com/css?family=Playfair|Roboto|Montserrat|Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Playfair|Lato|Montserrat|Playfair+Display');
 
 $base-font: "Playfair", "Helvetica", "sans-serif";
-$header-font: "Playfair", "Helvetica", "sans-serif";
+$header-font: "Montserrat", "Helvetica", "sans-serif";
 
+
+$black: #00171F;
+$silver: #ACB0BD;
+$dark-gray: #454851;
+$darker-gray: #727274;
+$lighter-gray: #D9DADC;
 $red-gold: #FFD700;
 
-$brand-title: "Playfair" 15px red;
+
 

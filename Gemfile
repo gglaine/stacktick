@@ -45,6 +45,15 @@ gem 'carrierwave', '~> 1.0'
 gem 'cloudinary'
 gem 'attachinary'
 
+gem 'js-routes', '~> 1.3'
+gem 'react-rails', '~> 1.8'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-classnames'
+end
+
+gem 'acts_as_votable'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

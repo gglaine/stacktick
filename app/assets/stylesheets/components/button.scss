@@ -12,15 +12,18 @@
 .btn-subscribe {
   color: #999999;
   border: 1px solid #999999;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 50px;
+  line-height: 1;
   font-weight: lighter;
   opacity: 0.6;
 }
+
 .btn-subscribe:hover {
   opacity: 1;
   text-decoration: none;
   color: #999999;
+  background: $darker-gray;
 }
 
 .btn-new-article:hover {

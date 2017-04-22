@@ -35,7 +35,11 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :card_pic do
-    process resize_to_fit: [200, 250]
+    process resize_to_fit: [200, 200]
+  end
+
+  version :feature do
+    process resize_to_fit: [500, 250]
   end
 
    version :full_width do
