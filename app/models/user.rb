@@ -7,10 +7,12 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
+  has_attachment  :avatar, accept: [:jpg, :png, :gif, :jpeg]
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessor :avatar_cache, :avatar
+  validates :avatar, presence: true
 
   acts_as_voter
 

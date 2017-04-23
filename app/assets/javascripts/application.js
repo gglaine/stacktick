@@ -16,10 +16,10 @@
 //= require jquery.ui.widget
 //= require jquery.iframe-transport
 //= require jquery.fileupload
-//= require bootstrap-sprockets
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 
+//= require bootstrap-sprockets
 
 //= require monstyle.js
 //= require react
@@ -27,5 +27,7 @@
 //= require components
 //= require_tree .
 
-
+$(document).ready(function() {
+  $('.attachinary-input').attachinary()
+});
 
