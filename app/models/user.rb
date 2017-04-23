@@ -12,7 +12,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :avatar, presence: true
+  # validates :avatar, presence: true
 
   acts_as_voter
 
