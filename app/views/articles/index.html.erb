@@ -1,3 +1,13 @@
+<div class="jumbotron">
+  <div class="container">
+  <div class="text-center">
+    <h4>Get the best articles straight to your inbox</h4>
+    <br>
+        <!-- Button (call-to-action) -->
+    <%= link_to t(".top_call_to_action", default: "Subscribe"), "#", class: "btn-subscribe" %>
+   </div>
+  </div>
+</div>
 <div class="wrapper-grey">
   <div class="container-fluid">
     <div class="row">
@@ -28,7 +38,15 @@
                       </div>
                       <div class="card-article-date"><%= article.created_at.strftime("%d/%m/%Y") %>
                       </div>
+
+
+                      <i class="fa fa-comment-o" aria-hidden="true"></i>
+                      <div class="text-center">
+                      <span class="badge"><%= article.comments.count %></span>
+                      </div>
                       <div class="card-article-bookmark">
+
+
                         <i class="fa fa-bookmark-o" aria-hidden="true"></i>
                       </div>
                     </div>

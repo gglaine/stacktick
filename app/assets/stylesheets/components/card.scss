@@ -13,10 +13,29 @@
   border-left: 1px solid $black;
 }
 
+.fa {
+  color: green;
+}
+
+.card-article .fa.fa-comment-o {
+  margin-right: 1px;
+  margin-left: 95px;
+  font-size: 22px;
+  color: $darker-gray;
+}
+
+.badge {
+  background-color: transparent;
+  color: $darker-gray;
+  border: 1px solid grey;
+  font-size: 10px;
+}
 
 .card-article-content {
   font: 100% $header-font;
   position: relative;
+  height: 135px;
+  margin-bottom: 20px;
   p {
       font: 100% $base-font;
       color: $darker-gray;
@@ -29,7 +48,12 @@
 }
 
 .card-article-infos {
-  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 .card-article-avatar {
@@ -50,12 +74,11 @@
 
 .card-article-bookmark {
   position: absolute;
-  width: 100%;
-  left: 325px;
-  bottom: 0px;
-  .fa {
+  left: 270px;
+  bottom: 6px;
+  .fa.fa-bookmark-o {
     font-size: 22px;
-    color: blue;
+    color: $darker-gray;
   }
 }
 
