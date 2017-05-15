@@ -8,6 +8,9 @@ $(document).ready(function(){
     $('.share-links').fadeOut(100);
     $('.share-links').fadeIn(100);
   })
+  $('.comment-shower').click(function() {
+    $('.comment-pop').fadeIn();
+  });
 });
 
 

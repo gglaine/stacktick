@@ -35,9 +35,73 @@ a {
 }
 
 .jumbotron {
-  background: url("macrainbow.jpg");
+  background: $dark-gray;
   height: 25vh;
 margin-top: 50px;
 margin-bottom: 50px;
-color: $dark-gray;
+color: $lighter-gray;
 }
+
+.modal-header img {
+  width: 150px;
+  margin-left: 25%;
+}
+
+.modal-header p {
+  margin-bottom: 2px;
+}
+
+.modal-body {
+  height: 30vh;
+  input{
+    display: inline;
+  }
+}
+
+.article-show-text {
+  padding-top: 50px;
+  margin-bottom: 45px;
+  p {
+    font: 100% $header-font;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+.prefill {
+  color: $lighter-gray;
+}
+
+.prefill:focus {
+  color: black;
+}
+
+.form-field input {
+ border-radius: 4px;
+ width: 220px;
+}
+
+.form-login {
+  position: relative;
+  height: 110px;
+}
+
+.form-login .remember-box {
+position: absolute;
+left: 40px;
+bottom: 20px;
+font-size: 12px;
+margin-top: 15px;
+}
+
+.form-login .login-button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin-top: 15px;
+}
+
+
+
+
+

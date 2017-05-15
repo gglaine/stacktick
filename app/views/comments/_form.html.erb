@@ -2,11 +2,11 @@
 
   <%= form_for([@article, @article.comments.build], remote: true) do |f| %>
 
-    <%= f.label :pseudo %><br>
+    <%= f.label :username %> <br>
     <%= f.text_field :commenter, class: 'comment-form-body' %>
-
-    <%= f.label :commentaire %><br>
+    <br>
+    <%= f.label :comment %> <br>
     <%= f.text_area :body, class: 'comment-form-body' %>
-
-    <%= f.submit 'Publier', class: 'btn-primary' %>
+    <br>
+    <%= f.submit 'Publish', class: 'btn-primary' %>
 <% end %>

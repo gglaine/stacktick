@@ -1,7 +1,7 @@
 <div class="navbar-wagon navbar-wagon-fixed">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "plume.png" %> <h1> My Little Big Blog </h1>
+    <%= image_tag "plume.png" %> <h1> Q-rated</h1>
   <% end %>
 
   <!-- Right Navigation -->
@@ -19,6 +19,9 @@
           <%= cl_image_tag(current_user.avatar.path, { size: '50x50', crop: :thumb, gravity: :face , class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown"}) %>
           <% else %>
           <%= current_user.username %>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
           <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
@@ -43,7 +46,9 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Sign in / Sign up"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+
+      <%= link_to "Sign-in / Sign-up", "#login", "data-toggle" => "modal", :class => 'btn btn-small' %>
 
     <% end %>
 

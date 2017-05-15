@@ -1,10 +1,8 @@
-<div class="jumbotron">
+<div class="jumbotron alert-dismissible">
   <div class="container">
   <div class="text-center">
     <h4>Get the best articles straight to your inbox</h4>
-    <br>
-        <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Subscribe"), "#", class: "btn-subscribe" %>
+    <%= link_to t(".top_call_to_action", default: "Subscribe"), "#", class: "btn btn-success" %>
    </div>
   </div>
 </div>
@@ -31,7 +29,7 @@
                     <p><%= article.preview %></p>
                     <div class="card-article-infos">
                       <div class="card-article-avatar">
-                        <%= image_tag "http://placehold.it/30x30", class: "avatar"%>
+                       <%= image_tag( "avatar_guillaume.png", { class: 'avatar'} ) %>
                       </div>
                       <div class="card-article-author">
                         <%= current_user.try(:username) %>
