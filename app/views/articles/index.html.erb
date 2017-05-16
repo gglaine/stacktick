@@ -20,7 +20,7 @@
               <div class="card-article">
                 <div class="col-xs-12 col-md-4">
                   <div class="img-responsive">
-                 <%= cl_image_url article.photo.url(:card_pic) %>
+                 <%= cl_image_tag article.photo.url(:card_pic) %>
                   </div>
                 </div>
                 <div class="col-xs-12 col-md-8">
@@ -68,7 +68,7 @@
             <div class="text-center">
               <h1><%= article.title.capitalize %> </h1>
             </div>
-             <%= cl_image_url article.photo.url %>
+             <%= cl_image_tag article.photo.url %>
             </li>
             <% end %>
           </ul>
