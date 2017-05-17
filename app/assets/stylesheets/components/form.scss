@@ -1,16 +1,16 @@
 .form-field-email input{
-  border-radius: 2px;
-  margin-bottom: 14px;
-  padding: 15px 10px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  padding: 4px 2px;
   width: 100%;
   font-size: 14px;
 }
 
 
 .form-field-password input{
-  border-radius: 2px;
-  margin-bottom: 14px;
-  padding: 15px 10px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  padding: 4px 2px;
   width: 100%;
   font-size: 14px;
 }
@@ -22,20 +22,33 @@ font-size: 12px;
 margin-top: 15px;
 }
 
+.form-login h4 {
+  font-size: 9px;
+  margin-bottom: 20px;
+}
+
 .form-login .login-button {
   position: absolute;
   height: 60px;
   width:60px;
   text-align: center;
   margin-top: 15px;
-  background: $bright-yellow;
-  color: black;
+  background: $blue;
+  color: #ffffff;
   border-radius: 50%;
-  bottom: -90px;
+  bottom: -50px;
   right: 10px;
   opacity: 1;
   font-weight: bold;
   border: none;
+  border: 2px solid $orange;
+  letter-spacing: 1.3px;
+  &:hover {
+    background: $orange;
+    color: $blue;
+    border: 2px solid $bright-yellow;
+  }
+
 }
 
 
@@ -54,7 +67,11 @@ margin-top: 15px;
   height: 300px;
   background: #ffffff;
   opacity: 0.9;
-  }
+}
+
+.modal-body h4 {
+  color: $blue;
+}
 
 
 .modal-footer {

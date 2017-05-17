@@ -7,7 +7,10 @@
   align-items: center;
   justify-content: space-between;
   color: $silver;
+  opacity: 0.88;
 }
+
+
 
 /* Optional class to fix the navbar on top */
 .navbar-wagon-fixed {
@@ -130,7 +133,7 @@
   font-size: 22px;
 }
 .navbar-wagon-search-input {
-  flex: 1 0 220px;
+  width: 280px;
   transition: all 0.15s ease;
   line-height: 30px;
   font-weight: lighter;
@@ -176,5 +179,16 @@
   border-top: 1px solid #E6E6E6;
 }
 
+.navbar-categories ul  {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
 
+.navbar-categories>li {
+  display: flex;
+  &:hover {
+    border-bottom: 2px solid silver;
+  }
+}
 

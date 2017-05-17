@@ -12,8 +12,9 @@
   padding: 5px 10px;
   border-bottom: 1px groove $darker-gray;
   margin-bottom: 10px;
-
 }
+
+
 
 .fa {
   color: silver;
@@ -170,6 +171,8 @@
 
 .card-article-mini{
   position: relative;
+  height: 200px;
+  width:100%;
   background: $bright-yellow;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -186,6 +189,10 @@
   }
   ul {
     padding-left: 0px;
+  }
+    &:hover {
+    background: $orange;
+    transition: 2s;
   }
 }
 
