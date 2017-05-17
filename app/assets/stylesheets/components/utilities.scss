@@ -4,21 +4,6 @@
   margin-top: 28px;
 }
 
-.container-fluid {
-  max-width: 90%;
-  background: #ffffff;
-  margin-top: 5px;
-  margin-left: auto;
-}
-
-.row {
-  background: #ffffff;
-  width: 100% !important;
-  padding-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 50px;
-}
 
 ul {
   list-style-type: none;
@@ -42,21 +27,6 @@ margin-bottom: 50px;
 color: $lighter-gray;
 }
 
-.modal-header img {
-  width: 150px;
-  margin-left: 25%;
-}
-
-.modal-header p {
-  margin-bottom: 2px;
-}
-
-.modal-body {
-  height: 30vh;
-  input{
-    display: inline;
-  }
-}
 
 .article-show-text {
   padding-top: 50px;
@@ -76,30 +46,6 @@ color: $lighter-gray;
   color: black;
 }
 
-.form-field input {
- border-radius: 4px;
- width: 220px;
-}
-
-.form-login {
-  position: relative;
-  height: 110px;
-}
-
-.form-login .remember-box {
-position: absolute;
-left: 40px;
-bottom: 20px;
-font-size: 12px;
-margin-top: 15px;
-}
-
-.form-login .login-button {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  margin-top: 15px;
-}
 
 
 

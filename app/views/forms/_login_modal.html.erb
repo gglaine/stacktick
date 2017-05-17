@@ -3,22 +3,25 @@
     <div class="modal-content">
       <div class="modal-header">
         <button class="close" data-dismiss="modal">x</button>
-        <%= image_tag "plume.png" %>
         <div class="text-center">
-          <h3>My Little Big Blog</h3>
-          <p>Sign in to comment and connect with other readers</p>
+          <h3>TECHKILLA</h3>
+          <%= image_tag('tequila.png', class: "navbar-wagon-logo") %>
+
         </div>
       </div>
       <div class="modal-body">
         <div class="row">
           <div class="col-xs-12">
+              <div class="text-center">
+                <h4>Sign in to comment and connect with other readers</h4>
+              </div>
             <div class="form-login">
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <div class="field">
-                  <%= f.email_field(:email, placeholder: "Email", autofocus: true, class: "form-field") %>
+                <div class="form-field-email">
+                  <%= f.email_field(:email, placeholder: "Your Email", autofocus: true, class: "form-field") %>
                 </div>
-                <div class="field">
-                  <%= f.password_field(:password, placeholder: "password", autocomplete: "off")  %>
+                <div class="form-field-password">
+                  <%= f.password_field(:password, placeholder: "Your Password", autocomplete: "off")  %>
                 </div>
                 <% if devise_mapping.rememberable? -%>
                   <div class="field remember-box">
@@ -26,13 +29,10 @@
                     <%= f.label :remember_me%>
                   </div>
                 <% end -%>
-                <div class="actions">
-                  <%= f.submit "Log in", class: "btn btn-primary login-button"%>
-                </div>
+                  <%= f.submit "LOGIN", class: "login-button"%>
               <% end %>
             </div>
           </div>
-
         </div>
       </div>
       <div class="modal-footer">

@@ -3,14 +3,3 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.carousel-inner{
-  width: 120%;
-  margin-left: -10%;
-}
-
-@media (min-width: 768px){
-  .carousel-inner{
-    width: 100%;
-    margin: 0;
-  }
-}

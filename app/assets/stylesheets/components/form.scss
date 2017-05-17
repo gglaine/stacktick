@@ -1,5 +1,63 @@
-.field input{
+.form-field-email input{
   border-radius: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 14px;
+  padding: 15px 10px;
   width: 100%;
+  font-size: 14px;
 }
+
+
+.form-field-password input{
+  border-radius: 2px;
+  margin-bottom: 14px;
+  padding: 15px 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.form-login  {
+position: relative;
+  height: 110px;
+font-size: 12px;
+margin-top: 15px;
+}
+
+.form-login .login-button {
+  position: absolute;
+  height: 60px;
+  width:60px;
+  text-align: center;
+  margin-top: 15px;
+  background: $bright-yellow;
+  color: black;
+  border-radius: 50%;
+  bottom: -90px;
+  right: 10px;
+  opacity: 1;
+  font-weight: bold;
+  border: none;
+}
+
+
+.modal-header {
+  background: $bright-yellow;
+  h3 {
+      letter-spacing: 4px;
+  }
+}
+
+.modal-header p {
+  margin-bottom: 2px;
+}
+
+.modal-body {
+  height: 300px;
+  background: #ffffff;
+  opacity: 0.9;
+  }
+
+
+.modal-footer {
+  background: $bright-yellow;
+}
+

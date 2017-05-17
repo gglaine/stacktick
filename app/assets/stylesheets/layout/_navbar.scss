@@ -1,15 +1,12 @@
 /* Main class */
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: linear-gradient(110deg, $lighter-gray 70%, #464655 80%);
-  transition: all 0.3s ease;
+  background: $bright-yellow;
   display: flex;
   height: 60px;
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
   color: $silver;
-  border-bottom: 1px solid $lighter-gray;
 }
 
 /* Optional class to fix the navbar on top */
@@ -21,12 +18,28 @@
   width: 100%;
 }
 
+.navbar-wagon-logo {
+  width: 50px;
+  height: 50px;
+  display: inline;
+  color: red;
+}
+
 .navbar-wagon h1 {
   font: 100% $header-font;
-  color: $black;
-  font-size: 16px;
+  color: $dark-gray;
+  font-size: 18px;
+  font-weight: bold;
   display: inline-block;
+  letter-spacing: 4px;
   margin-left: 5px;
+}
+
+.navbar-signup {
+  color: #ffffff;
+  border-bottom: 2px black;
+  padding: 5px;
+  width: 120px;
 }
 
 /* Navbar logo */
@@ -83,26 +96,43 @@
 
 /* Navbar search form */
 .navbar-wagon-search {
-  flex: 0 1 300px;
+  flex: 1 0 200px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: left;
   padding: 0 10px;
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background: transparent;
 }
 .navbar-wagon-search-btn {
+  line-height: 35px;
+  color: black;
+  border: none;
+  background: transparent;
+  position: absolute;
+  left: 254px;
+  top: 2px;
+  z-index: 1;
+}
+
+.navbar-wagon-search-btn.fa.fa-search {
   line-height: 40px;
   color: #E6E6E6;
   border: none;
   background: transparent;
   position: absolute;
-  right: 14px;
-  top: -2px;
+  left: 274px;
+  top: 4px;
   z-index: 1;
+  font-size: 22px;
 }
 .navbar-wagon-search-input {
-  flex: 0 1 300px;
+  flex: 1 0 220px;
   transition: all 0.15s ease;
-  line-height: 40px;
+  line-height: 30px;
   font-weight: lighter;
   color: #666666;
   border: 1px solid #E6E6E6;
@@ -145,3 +175,6 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+
+

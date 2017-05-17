@@ -1,65 +1,31 @@
-<div class="jumbotron alert-dismissible">
-  <div class="container">
-  <div class="text-center">
-    <h4>Get the best articles straight to your inbox</h4>
-    <%= link_to t(".top_call_to_action", default: "Subscribe"), "#", class: "btn btn-success" %>
-   </div>
-  </div>
-</div>
+
 <div class="wrapper-grey">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class= "col-xs-12 col-md-8">
-        <div class="card-article-header-top">
+      <div class="col-xs-12 col-md-8">
           <h3>Latest ></h3>
-          <h5>Most recent posts</h5>
-        </div>
-        <% @articles.each do |article| %>
+          <% @articles.each do |article| %>
+          <div class="card-article">
           <%= link_to article_path(article) do %>
-            <div class="row">
-              <div class="card-article">
-                <div class="col-xs-12 col-md-4">
-                  <div class="img-responsive">
-                 <%= cl_image_tag article.photo.url(:card_pic) %>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-md-8">
-                  <div class="card-article-content">
-                    <h1><%= article.title.capitalize %></h1>
-                    <p><%= article.preview %></p>
-                    <div class="card-article-infos">
-                      <div class="card-article-avatar">
-                       <%= image_tag( "avatar_guillaume.png", { class: 'avatar'} ) %>
-                      </div>
-                      <div class="card-article-author">
-                        <%= current_user.try(:username) %>
-                      </div>
-                      <div class="card-article-date"><%= article.created_at.strftime("%d/%m/%Y") %>
-                      </div>
-
-
-                      <i class="fa fa-comment-o" aria-hidden="true"></i>
-                      <div class="text-center">
-                      <span class="badge"><%= article.comments.count %></span>
-                      </div>
-                      <div class="card-article-bookmark">
-
-
-                        <i class="fa fa-bookmark-o" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <%end %>
-        <% end %>
-      </div>
-      <div class="col-md-4">
-        <div class="card-article-header-top">
-          <h3>Popular ></h3>
-          <h5>Most popular all time</h5>
-        </div>
+            <h1><%= article.title.capitalize %></h1>
+            <p><%= article.author %></p>
+            <p><%= article.publisher %></p>
+              <p><%= article.preview %></p>
+                <h6>Published : <%= article.created_at.strftime("%d/%m/%Y") %></h6>
+                <h6>Comments : <%= article.comments.count %></h6>
+            <% end %>
+          </div>
+          <% end %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <form action="" class="navbar-wagon-search">
+        <input type="text" class="navbar-wagon-search-input" placeholder="Search articles">
+        <button type="submit" class="navbar-wagon-search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+        <h3>Popular ></h3>
+        <h5><a href="#">  Most popular</a> . <a href="#">See all</a></h5>
       <% @articles.reverse_each do |article| %>
         <div class="card-article-mini">
           <ul>
@@ -68,13 +34,12 @@
             <div class="text-center">
               <h1><%= article.title.capitalize %> </h1>
             </div>
-             <%= cl_image_tag article.photo.url %>
-            </li>
             <% end %>
+            </li>
           </ul>
         </div>
       <% end %>
-      </div>
+
     </div>
   </div>
 </div>
