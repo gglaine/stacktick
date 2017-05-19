@@ -9,7 +9,6 @@
 }
 
 .modal-body {
-  height: 30vh;
     background: $bright-yellow;
   opacity: 0.9;
   }
@@ -17,4 +16,8 @@
 
 .modal-footer {
   background: $bright-yellow;
+}
+
+.modal-content {
+  width: 200px;
 }

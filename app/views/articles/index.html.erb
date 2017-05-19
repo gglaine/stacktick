@@ -1,9 +1,9 @@
 
-<div class="wrapper-grey">
+<div class="wrapper-green">
   <div class="container">
     <div class="row" id="mainrow">
       <div class="col-xs-12">
-        <div class="card">
+        <div class="card" id="maincard">
           <form action="" class="navbar-wagon-search">
             <input type="text" class="navbar-wagon-search-input" placeholder="Search articles">
             <button type="submit" class="navbar-wagon-search-btn">
@@ -19,10 +19,22 @@
         <% @articles.each do |article| %>
         <div class="card-article">
           <%= link_to article_path(article) do %>
-            <h1><%= article.id%> / <%= article.title.capitalize %></h1>
-              <p><%= article.author %> - <strong><%= article.publisher %></strong></p>
-              <h6><%= article.created_at.strftime("%d/%m/%Y") %></h6>
-              <h6>Comments : <%= article.comments.count %></h6>
+          <div class="product-arrow"></div><h6><%= rand(290) %></h6>
+            <h1><%= article.title.capitalize %></h1>
+              <ul class="card-article-items">
+                <li>
+                  <%= article.author %>
+                </li>
+                <li>
+                  <%= article.created_at.strftime("%d/%m/%Y") %>
+                </li>
+                <li>
+                 <%= article.publisher %>
+                </li>
+                <li>
+                  <i class="fa fa-comment" aria-hidden="true"></i> <%= article.comments.count %>
+                </li>
+              </ul>
           <% end %>
         </div>
         <% end %>
@@ -37,6 +49,7 @@
             <%= link_to article_path(article) do %>
             <div class="text-center">
               <h1><%= article.title.capitalize %> </h1>
+              <strong><%= article.publisher %></strong>
             </div>
             <% end %>
             </li>

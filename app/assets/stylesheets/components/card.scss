@@ -1,3 +1,8 @@
+#maincard {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
 .card p {
   font-family: 'Playfair Display', serif;
   line-height: 1.6;
@@ -6,15 +11,39 @@
 }
 
 .card-article {
-  position: relative;
+
   padding-bottom: 10px;
-  background: $bright-yellow;
-  padding: 5px 10px;
+  background: #ffffff;
+  padding: 10px 0px;
   border-bottom: 1px groove $darker-gray;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
+
+  width: 100%;
+
 }
 
+.card-article-items {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 2px;
+}
 
+.card-article li {
+
+  flex: 1 0 15%;
+  display: inline;
+  height: 20px;
+  padding-bottom: 4px;
+  margin-right: 15px;
+  &:hover {
+    background: red;
+  }
+}
+
+.card-article h1 {
+  display: block;
+  line-height: 0.8;
+}
 
 .fa {
   color: silver;
@@ -22,9 +51,9 @@
 
 .card-article .fa.fa-comment-o {
   margin-right: 1px;
-  margin-left: 95px;
+  margin-left: 5px;
   font-size: 22px;
-  color: $darker-gray;
+  color: $green;
 }
 
 .badge {
@@ -87,6 +116,7 @@
 
 .card-article:hover {
   cursor: pointer;
+      padding-left:10px;
 }
 
 .card-article-header-top {
@@ -171,20 +201,21 @@
 
 .card-article-mini{
   position: relative;
-  height: 200px;
   width:100%;
-  background: $bright-yellow;
+  background: #ffffff;
+  border: 2px solid $bright-yellow;
   margin-top: 5px;
   margin-bottom: 5px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font: 100% $header-font;
-  opacity: 0.90;
+  opacity: 1;
   h1 {
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 3px;
+    padding-left: 3px;
     color: $black;
   }
   ul {
@@ -192,7 +223,7 @@
   }
     &:hover {
     background: $orange;
-    transition: 2s;
+    transition: 0.2s;
   }
 }
 
