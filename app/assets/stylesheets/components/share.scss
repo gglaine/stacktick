@@ -1,0 +1,15 @@
+
+
+.share-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.share-link {
+  flex: 0 1 25%;
+  color: $bright-yellow;
+  font-size: 16px;
+  padding: 5px 5;
+  text-align: center;
+  cursor: pointer;
+}

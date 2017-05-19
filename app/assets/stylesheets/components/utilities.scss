@@ -1,16 +1,16 @@
 .wrapper-grey {
   background: #ffffff;
-  width: 100%;
+  width: 100% !important;
   margin-top: 28px;
-  padding: 0px;
+  padding: 0px !important;
+  margin-left: 0px;
 }
 
 #mainrow {
   background: transparent;
-  border-bottom: 2px solid black;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 

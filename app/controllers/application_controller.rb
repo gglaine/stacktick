@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
       @entriesArray << Entry.new(title)
     end
 
-    render template: 'scrape'
+    render 'scrape'
   end
 
   protected

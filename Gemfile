@@ -29,6 +29,8 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
+gem 'gravtastic'
+
 gem 'figaro'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -38,6 +40,7 @@ gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+gem 'omniauth-facebook'
 gem 'rails_admin'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,18 +1,20 @@
 .form-field-email input{
   border-radius: 3px;
   margin-bottom: 12px;
-  padding: 4px 2px;
+  padding: 4px 8px;
   width: 100%;
-  font-size: 14px;
+  font-size: 11px;
+  border-bottom: none;
 }
 
 
-.form-field-password input{
+.form-field-password input {
   border-radius: 3px;
   margin-bottom: 12px;
-  padding: 4px 2px;
+  padding: 4px 8px;
   width: 100%;
-  font-size: 14px;
+  font-size: 11px;
+  border-bottom: 1px solid silver
 }
 
 .form-login  {
@@ -32,7 +34,6 @@ margin-top: 15px;
   height: 60px;
   width:60px;
   text-align: center;
-  margin-top: 15px;
   background: $blue;
   color: #ffffff;
   border-radius: 50%;
@@ -42,7 +43,7 @@ margin-top: 15px;
   font-weight: bold;
   border: none;
   border: 2px solid $orange;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.2px;
   &:hover {
     background: $orange;
     color: $blue;
@@ -70,7 +71,8 @@ margin-top: 15px;
 }
 
 .modal-body h4 {
-  color: $blue;
+  color: black;
+  font-size: 16px;
 }
 
 

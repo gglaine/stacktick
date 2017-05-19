@@ -13,8 +13,8 @@ require 'faker'
 30.times do
   article = Article.new(
     title:   "#{Faker::Company.catch_phrase}",
-    text: "#{Faker::Lorem.paragraph(15)}",
-    preview: "#{Faker::Lorem.paragraph(2)}",
+    text: "#{Faker::Lorem.paragraph(8)}",
+    preview: "#{Faker::Lorem.paragraph(3)}",
     author: "#{Faker::Book.author}",
     publisher: "#{Faker::Book.publisher}"
 

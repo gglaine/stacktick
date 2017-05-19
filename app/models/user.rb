@@ -9,6 +9,9 @@ class User < ApplicationRecord
 
   has_attachment  :avatar, accept: [:jpg, :png, :gif, :jpeg]
 
+  include Gravtastic
+  gravtastic
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
