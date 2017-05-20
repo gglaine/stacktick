@@ -5,44 +5,40 @@
         <button class="close" data-dismiss="modal">x</button>
         <div class="text-center">
           <h3>TECHKILLA</h3>
-
+          <h5>It's your shot !</h5>
         </div>
       </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-x-12">
       <div class="modal-body">
-        <div class="row">
-          <div class="col-xs-12">
-              <div class="text-center">
-                <h4>Sign in to comment and connect with other readers</h4>
-              </div>
-            <div class="form-login">
-              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <div class="form-field-email">
-                  <%= f.email_field(:email, placeholder: "Your Email", autofocus: true, class: "form-field") %>
-                </div>
-                <div class="form-field-password">
-                  <%= f.password_field(:password, placeholder: "Your Password", autocomplete: "off")  %>
-                </div>
-                <% if devise_mapping.rememberable? -%>
-                  <div class="field remember-box">
-                    <%= f.check_box :remember_me %>
-                    <%= f.label :remember_me%>
-                  </div>
-                  <div class="card">
-                    <%= f.submit "LOGIN", class: "login-button"%>
-                <% end -%>
-                <div class="login-facebook-button"><i class="fa fa-facebook-official" aria-hidden="true"></i>Sign-In with Facebook</div>
-                  <%= render "devise/shared/links" %>
-                  </div>
-              <% end %>
-
-
+        <div class="form-login">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-field-email">
+              <%= f.email_field(:email, placeholder: "Your Email", autofocus: true, class: "form-field") %>
             </div>
-          </div>
+            <div class="form-field-password">
+              <%= f.password_field(:password, placeholder: "Your Password", autocomplete: "off")  %>
+            </div>
+            <% if devise_mapping.rememberable? -%>
+              <div class="field remember-box">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me%>
+              </div>
+              <div class="card" id="logbuttons">
+                <%= f.submit "LOGIN", class: "login-button"%>
+            <% end -%>
+                <%= render "devise/shared/links" %>
+              </div>
+          <% end %>
         </div>
-
       </div>
-
     </div>
+  </div>
+</div>
+
+        </div>
   </div>
 </div>
 

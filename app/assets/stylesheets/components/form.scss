@@ -5,6 +5,7 @@
   width: 100%;
   font-size: 12px;
   border-left: none;
+    border-top: none;
 }
 
 
@@ -15,11 +16,21 @@
   width: 100%;
   font-size: 12px;
   border-left: none;
+  border-top: none;
+}
+
+#logbuttons {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 10px;
+  width:260px;
+  margin-top: 30px;
 }
 
 .form-login  {
 position: relative;
-  height: 110px;
+height: 150px;
+margin-left: 0px;
 font-size: 12px;
 margin-top: 15px;
 }
@@ -39,11 +50,11 @@ margin-top: 15px;
   color: black;
   height: 40px;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
   opacity: 1;
   border: none;
   letter-spacing: 1.7px;
-  font-size: 12px;
+  font-size: 16px;
   &:hover {
     background: $orange;
     color: $blue;
@@ -59,36 +70,43 @@ margin-top: 15px;
   margin-bottom: 5px;
   text-align: center;
   background: $blue;
-  color: black;
+  color: #ffffff;
   height: 40px;
   width: 100%;
   border-radius: 2px;
   opacity: 1;
   border: none;
   letter-spacing: 1.7px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bolder;
   &:hover {
     background: $orange;
-    color: $blue;
-    border: 2px solid $bright-yellow;
+    color: silver;
   }
 }
 
 .signup-button {
-    height: 35px;
-  width:280px;
+      padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right:10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+    height: 40px;
+  width:100%;
   text-align: center;
-  background: red;
-  color: $orange;
-  border-radius: 5%;
-  color: silver;
-  flex: center;
+  border: 1px solid silver;
+  color: #ffffff;
+  border-radius: 3px;
+  background: transparent;
+   letter-spacing: 1.7px;
+   font-size: 14px;
 }
 
 .modal-header {
   background: $bright-yellow;
   h3 {
-      letter-spacing: 14px;
+      letter-spacing: 8px;
+      font-size: 18px;
   }
 }
 
@@ -97,11 +115,13 @@ margin-top: 15px;
 }
 
 .modal-body {
-  background: #ffffff;
   opacity: 0.95;
-  margin: 2px !important;
+  margin: 0 auto;
   display: flex;
+  flex: align-items;
   height: 350px;
+  width: 280px;
+
 }
 
 .modal-body h4 {

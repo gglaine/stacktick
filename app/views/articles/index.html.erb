@@ -4,6 +4,7 @@
     <div class="row" id="mainrow">
       <div class="col-xs-12">
         <div class="card" id="maincard">
+        <h3>Search ></h3>
           <form action="" class="navbar-wagon-search">
             <input type="text" class="navbar-wagon-search-input" placeholder="Search articles">
             <button type="submit" class="navbar-wagon-search-btn">
@@ -50,6 +51,7 @@
             <div class="text-center">
               <h1><%= article.title.capitalize %> </h1>
               <strong><%= article.publisher %></strong>
+              <h5><%= article.created_at.strftime("%d/%m/%Y") %></h5>
             </div>
             <% end %>
             </li>
