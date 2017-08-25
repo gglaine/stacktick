@@ -8,12 +8,14 @@ task :scrape_hn do
     liste.each do |element|
       Article.create!(
         title: element.css(".title>a").text,
-        source: element.css(".title>.sitebit").text,
-        url: element.css(".title>a")[0]["href"] )
+        source: element.css(".title>.sitebit").text
+         )
     end
 end
 
 # In the console run
 # require 'rake'
-# Jojoba::Application.load_tasks
+# Techkilla::Application.load_tasks
 # Rake::Task['scrape_hn'].invoke
+
+# url: element.css(".title>a")[0]["href"]

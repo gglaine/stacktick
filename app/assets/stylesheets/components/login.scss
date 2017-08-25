@@ -1,6 +1,6 @@
 
 .modal-header img {
-  width: 150px;
+  width: 250px;
   margin-left: 25%;
 }
 
@@ -9,7 +9,6 @@
 }
 
 .modal-body {
-    background: $bright-yellow;
   opacity: 0.9;
   }
 
@@ -19,5 +18,10 @@
 }
 
 .modal-content {
-  width: 200px;
+  border-radius: 8px;
 }
+
+#login-modal-background {
+background: linear-gradient(-2deg, #033d90 10%, rgba(75, 79, 88, 0) 38%), url('tequila-lime');
+}
+
