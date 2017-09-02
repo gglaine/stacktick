@@ -43,21 +43,20 @@ margin-top: 15px;
 .form-login .login-button {
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  /* margin-top: 5px; */
+  /* margin-bottom: 5px; */
   text-align: center;
-  background: $green;
-  color: black;
-  height: 40px;
+  background: #10bd29;
+  color: #ffffff;
+  height: 50px;
   width: 100%;
   border-radius: 3px;
   opacity: 1;
   border: none;
-  letter-spacing: 1.7px;
+  letter-spacing: 1.3px;
   font-size: 16px;
   &:hover {
-    background: $orange;
-    color: $blue;
+    border-radius: 8px;
     border: 2px solid $bright-yellow;
   }
 }
@@ -86,20 +85,27 @@ margin-top: 15px;
 }
 
 .signup-button {
-      padding-top: 10px;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-right:10px;
   margin-top: 5px;
   margin-bottom: 5px;
-    height: 40px;
+  height: 40px;
   width:100%;
   text-align: center;
-  border: 1px solid silver;
   color: #ffffff;
   border-radius: 3px;
-  background: transparent;
-   letter-spacing: 1.7px;
-   font-size: 14px;
+  background: rgba(224, 209, 209, 0.86);
+  letter-spacing: 1.3px;
+  font-size: 16px;
+  &:hover {
+    background: #ffffff;
+    border: 1px solid silver;
+  }
+}
+
+.signup-button>a {
+  color: blue;
 }
 
 .modal-header {

@@ -28,9 +28,11 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-
 gem 'gravtastic'
-
+gem "octokit", "~> 4.0"
+gem 'ruby-hackernews', '~> 1.4'
+gem "github_api"
+gem 'multi_xml', '~> 0.5.5'
 gem 'figaro'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

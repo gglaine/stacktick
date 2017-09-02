@@ -16,10 +16,10 @@
         <div class="form-login">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-field-email">
-              <%= f.email_field(:email, placeholder: "Your Email", autofocus: true, class: "form-field") %>
+              <%= f.email_field(:email, placeholder: "Enter your email", autofocus: true, class: "form-field") %>
             </div>
             <div class="form-field-password">
-              <%= f.password_field(:password, placeholder: "Your Password", autocomplete: "off")  %>
+              <%= f.password_field(:password, placeholder: "Enter your password", autocomplete: "off")  %>
             </div>
             <% if devise_mapping.rememberable? -%>
               <div class="field remember-box">
