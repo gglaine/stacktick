@@ -26,6 +26,7 @@ gem 'font-awesome-rails'
 # gem 'materialize-sass'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'simple_form'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 gem 'gravtastic'
@@ -60,6 +61,8 @@ source 'https://rails-assets.org' do
 end
 
 gem 'acts_as_votable'
+
+gem 'httparty', '0.13.5'
 
 
 group :development, :test do
