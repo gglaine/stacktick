@@ -15,7 +15,7 @@ end
 
 # In the console run
 # require 'rake'
-# Techkilla::Application.load_tasks
+# Jojoba::Application.load_tasks
 # Rake::Task['scrape_hn'].invoke
 
 # url: element.css(".title>a")[0]["href"]
