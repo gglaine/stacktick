@@ -35,6 +35,7 @@ gem 'ruby-hackernews', '~> 1.4'
 gem "github_api"
 gem 'multi_xml', '~> 0.5.5'
 gem 'figaro'
+gem 'annotate', require: false
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
