@@ -1,3 +1,16 @@
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title , input_html: { class: 'article-form-title' } %>
+  <%= f.input :preview, input_html: { class: 'article-form-title' } %>
+  <%= f.input :text, input_html: { class: 'article-form-body' } %>
+  <%= f.input :photo %>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+<!--
+
+
 <%= form_for :article, url: articles_path do |f| %>
    <% if @article.errors.any? %>
       <div id="error_explanation">
@@ -31,3 +44,4 @@
       <%= f.submit 'Envoyer' %>
     </p>
 <% end %>
+ -->

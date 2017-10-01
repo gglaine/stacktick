@@ -5,6 +5,7 @@
         <div class="text-center">
           <%= link_to 'Retour aux Articles', articles_path %>
           <h3><%= @article.title %></h3>
+          <%= image_tag(@article[:photo]) %>
           <p>Publié le <%= @article.created_at.strftime("%d/%m/%Y") %></p>
                   <div class="card-article-share">
 
