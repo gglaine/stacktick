@@ -1,12 +1,12 @@
 /* Main class */
 .navbar-wagon {
-  background: $bright-yellow;
+  background: $black;
   display: flex;
   height: 60px;
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
-  color: $silver;
+  color: $yellow;
   opacity: 0.88;
 }
 
@@ -30,7 +30,7 @@
 
 .navbar-wagon h1 {
   font: 100% $header-font;
-  color: $dark-gray;
+  color: $yellow;
   font-size: 18px;
   font-weight: bold;
   display: inline-block;

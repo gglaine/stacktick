@@ -3,22 +3,13 @@
   <div class="container">
     <div class="row" id="mainrow">
       <div class="col-xs-12">
-        <div class="card" id="maincard">
-        <h3>Search ></h3>
-          <form action="" class="navbar-wagon-search">
-            <input type="text" class="navbar-wagon-search-input" placeholder="Search articles">
-            <button type="submit" class="navbar-wagon-search-btn">
-              <i class="fa fa-search"></i>
-            </button>
-          </form>
-        </div>
+
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-8">
 
-
-        <%= link_to 'Ecrire un article', new_article_path %>
+          <%= link_to image_tag("write-article-icon", size: "50x50"), new_article_path  %>
 
         <h3>Latest ></h3>
         <% @articles.each do |article| %>
@@ -45,6 +36,15 @@
         <% end %>
     </div>
     <div class="col-xs-12 col-md-4">
+              <div class="card" id="maincard">
+        <h3>Search ></h3>
+          <form action="" class="navbar-wagon-search">
+            <input type="text" class="navbar-wagon-search-input" placeholder="Search articles">
+            <button type="submit" class="navbar-wagon-search-btn">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
       <h3>Popular ></h3>
         <h5><a href="#">  Most popular</a> . <a href="#">See all</a></h5>
         <% @articles.reverse_each do |article| %>
