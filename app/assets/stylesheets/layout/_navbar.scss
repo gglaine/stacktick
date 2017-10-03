@@ -1,13 +1,12 @@
 /* Main class */
 .navbar-wagon {
-  background: $black;
+  background: $darker-gray;
   display: flex;
   height: 60px;
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
   color: $yellow;
-  opacity: 0.88;
 }
 
 
@@ -121,8 +120,9 @@
   border: none;
   background: transparent;
   position: absolute;
-  left: 254px;
-  top: 2px;
+  right: 14px;
+  top: 10px;
+  font-size: 20px;
   z-index: 1;
 }
 
@@ -138,16 +138,17 @@
   font-size: 22px;
 }
 .navbar-wagon-search-input {
-  width: 280px;
+  width: 100%;
   transition: all 0.15s ease;
-  line-height: 30px;
+  line-height: 40px;
   font-weight: lighter;
   color: #666666;
   border-radius: 5px;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
-  border: 2px solid $bright-yellow;
+  background: $darker-gray;
+  border: 2px solid $gray;
 }
 .navbar-wagon-search-input:focus  {
   border: 1px solid #CCCCCC;

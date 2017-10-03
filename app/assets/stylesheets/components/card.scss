@@ -19,7 +19,7 @@
 
 .card-article {
   padding-bottom: 10px;
-  background: #fff54c;
+  background: $darker-gray;
   padding: 2px 12px;
   /* border: 1px groove #727274; */
   margin-bottom: 4px;
@@ -34,18 +34,27 @@
 }
 
 .card-article li {
-
-  flex: 1 0 15%;
-  display: inline;
-  height: 20px;
-  padding-bottom: 4px;
-  margin-right: 15px;
-  color: black;
+    flex: 1 0 85%;
+    display: inline;
+    /* height: 20px; */
+    /* padding-bottom: 4px; */
+    /* margin-right: 15px; */
+    color: #efe8e8;
 }
 
 .card-article h1 {
-  display: block;
-  line-height: 0.8;
+  display: inline-block;
+  line-height: 1;
+  font-size: 14px;
+  color: $yellow;
+}
+
+.card-article-mini h5 {
+color: $yellow;
+}
+
+.card-article-mini strong {
+  color: $gray;
 }
 
 .fa {
@@ -119,7 +128,11 @@
 
 .card-article:hover {
   cursor: pointer;
-      padding-left:10px;
+  margin-bottom: 10px;
+  background: $gray;
+  h1 {
+    font-size: 16px;
+  }
 }
 
 .card-article-header-top {
@@ -147,10 +160,6 @@
 // *** card fonts ***
 
 
-.card-article h1 {
-  font-size: 18px;
-  margin-top: 10px;
-}
 
 .card-article h2 {
   font-size: 14px;
@@ -205,8 +214,7 @@
 .card-article-mini{
   position: relative;
   width:100%;
-  background: #ffffff;
-  border-bottom: 2px solid $bright-yellow;
+  background: $darker-gray;
   margin-top: 5px;
   margin-bottom: 5px;
   padding-left: 10px;
@@ -216,16 +224,16 @@
   font: 100% $header-font;
   opacity: 1;
   h1 {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 3px;
     padding-left: 3px;
-    color: $black;
+    color: $yellow;
   }
   ul {
     padding-left: 0px;
   }
     &:hover {
-    background: $orange;
+    background: $gray;
     transition: 0.2s;
   }
 }
