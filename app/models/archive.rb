@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: archives
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Archive < ApplicationRecord
   include HTTParty
 
