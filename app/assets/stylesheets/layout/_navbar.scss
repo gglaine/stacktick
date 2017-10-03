@@ -40,9 +40,13 @@
 
 .navbar-signup {
   color: #ffffff;
-  border-bottom: 2px black;
+  border: 2px yellow;
+  border-radius: 20%;
   padding: 5px;
   width: 120px;
+  a {
+    color: $yellow !important;
+  }
 }
 
 /* Navbar logo */
