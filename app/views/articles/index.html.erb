@@ -3,35 +3,13 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8">
-
-<!--           <%= link_to image_tag("write-article-icon", size: "50x50"), new_article_path  %> -->
-
-        <h3>Latest ></h3>
+        <h3>Latest >>></h3>
         <% @articles.each do |article| %>
         <div class="card-article">
           <%= link_to article_path(article) do %>
-<!--           <div class="product-arrow"></div><h6><%= rand(290) %></h6> -->
             <h1><%= article.title.capitalize %></h1>
-              <ul class="card-article-items">
-<!--                 <li>
-                  <%= article.preview %>
-                </li>
-                <li>
-                  <%= article.author %>
-                </li>
-                <li>
-                  <%= article.created_at.strftime("%d/%m/%Y") %>
-                </li>
-                <li>
-                 <%= article.publisher %>
-                </li> -->
-                <li>
-                   <i class="fa fa-comment" aria-hidden="true"></i> <%= article.comments.count %>
-                </li>
-                <li>
-                  <i class="fa fa-bookmark"></i>
-                </li>
-              </ul>
+            <%= article.id %>
+            <h4><%= article.source.gsub(/[()]/, " ") %></h4>
           <% end %>
         </div>
         <% end %>
@@ -46,7 +24,7 @@
             </button>
           </form>
         </div>
-      <h3>Popular ></h3>
+      <h3>Popular >>>></h3>
         <h5><a href="#">  Most popular</a> . <a href="#">See all</a></h5>
         <% @articles.reverse_each do |article| %>
         <div class="card-article-mini">
