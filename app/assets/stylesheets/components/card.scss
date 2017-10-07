@@ -54,6 +54,12 @@
   font-size: 14px;
 }
 
+.card-article h5 {
+  &hover {
+    color: red;
+  }
+}
+
 .card-article-mini h5 {
 color: $yellow;
 }

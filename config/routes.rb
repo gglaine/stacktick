@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
+  get 'techmemes', to: 'techmemes#index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Attachinary::Engine => "/attachinary"
   devise_for :users

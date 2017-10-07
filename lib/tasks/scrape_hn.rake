@@ -8,7 +8,7 @@ task :scrape_hn do
     liste.each do |element|
       Article.create!(
         title: element.css(".title>a").text,
-        source: element.css(".title>.sitebit").text.str.gsub /^"|"$/, ''
+        source: element.css(".title>.sitebit").text.str.gsub(/^"|"$/, '')
          )
     end
 end

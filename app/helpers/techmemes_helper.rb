@@ -1,0 +1,2 @@
+module TechmemesHelper
+end

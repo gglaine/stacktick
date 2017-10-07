@@ -3,19 +3,20 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8">
-        <h3>Latest >>></h3>
+        <h3>Latest HackerNews >>></h3>
         <% @articles.each do |article| %>
-        <div class="card-article">
-          <%= link_to article_path(article) do %>
-            <h1><%= article.title.capitalize %></h1>
-            <%= article.id %>
-            <h4><%= article.source.gsub(/[()]/, " ") %></h4>
-          <% end %>
-        </div>
+          <div class="card-article">
+            <%= link_to article_path(article) do %>
+              <h1><%= article.title.capitalize %></h1>
+              <%= article.id %>
+              <h4><%= article.source.gsub(/[()]/, " ") %></h4>
+            <% end %>
+          </div>
         <% end %>
-    </div>
-    <div class="col-xs-12 col-md-4">
-        <div class="card" id="maincard">
+      </div>
+
+    <div class="col-md-4">
+      <div class="card" id="maincard" >
         <h3>Search ></h3>
           <form action="" class="navbar-wagon-search">
             <input type="text" class="navbar-wagon-search-input" placeholder="Search articles">
@@ -23,8 +24,10 @@
               <i class="fa fa-search"></i>
             </button>
           </form>
-        </div>
-      <h3>Popular >>>></h3>
+        <h3>Find_by[:source]</h3>
+        <h5><%= link_to 'TechMeme', techmemes_path %></h5>
+        <h5><%= link_to 'HackerNews', articles_path %></h5>
+      <h3>Popular >>></h3>
         <h5><a href="#">  Most popular</a> . <a href="#">See all</a></h5>
         <% @articles.reverse_each do |article| %>
         <div class="card-article-mini">
@@ -41,7 +44,6 @@
           </ul>
         </div>
       <% end %>
-
     </div>
   </div>
 </div>
