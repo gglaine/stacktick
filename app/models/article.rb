@@ -12,6 +12,7 @@
 #  author     :string
 #  publisher  :string
 #  source     :string
+#  url        :string
 #
 
 class Article < ApplicationRecord
