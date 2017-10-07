@@ -8,7 +8,6 @@
           <div class="card-article">
             <%= link_to article_path(article) do %>
               <h1><%= article.title.capitalize %></h1>
-              <%= article.id %>
               <h4><%= article.source.gsub(/[()]/, " ") %></h4>
             <% end %>
           </div>
@@ -24,9 +23,14 @@
               <i class="fa fa-search"></i>
             </button>
           </form>
-        <h3>Find_by[:source]</h3>
+        <h3>Find_by source: </h3>
         <h5><%= link_to 'TechMeme', techmemes_path %></h5>
         <h5><%= link_to 'HackerNews', articles_path %></h5>
+        <h5>StackExchange</h5>
+        <h5>GitHub</h5>
+        <h5>Reddit</h5>
+        <h5>Motherboard</h5>
+        <h5>Wired</h5>
       <h3>Popular >>></h3>
         <h5><a href="#">  Most popular</a> . <a href="#">See all</a></h5>
         <% @articles.reverse_each do |article| %>
