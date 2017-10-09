@@ -8,7 +8,7 @@
           <div class="card-article">
             <%= link_to article_path(article) do %>
               <h1><%= article.title.capitalize %></h1>
-              <h4><%= article.source.gsub(/[()]/, " ") %></h4>
+              <h4><%= article.source %></h4>
             <% end %>
           </div>
         <% end %>
