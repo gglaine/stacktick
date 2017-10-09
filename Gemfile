@@ -20,50 +20,63 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-gem 'font-awesome-rails'
-# gem 'materialize-sass'
+# Embed the V8 Javascript Interpreter into Ruby - See https://github.com/rails/execjs#readme for more
+gem 'therubyracer', platforms: :ruby
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'simple_form'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
-gem 'gravtastic'
-gem "octokit", "~> 4.0"
-gem 'ruby-hackernews', '~> 1.4'
-gem "github_api"
-gem 'multi_xml', '~> 0.5.5'
-gem 'figaro'
-gem 'annotate', require: false
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-gem 'devise'
-gem 'omniauth-facebook'
-gem 'rails_admin'
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-gem 'faker'
-gem 'kaminari'
-gem 'carrierwave', '~> 1.0'
-gem 'cloudinary'
-gem 'attachinary'
-
+# Use JS-routes to defines all Rails named routes as javascript helpers
 gem 'js-routes', '~> 1.3'
+# Use React-Rails to integrate React views, controllers and the asset pipeline, or webpacker
 gem 'react-rails', '~> 1.8'
-
+# Use Rails Assets Classnames for conditionally joining classNames together
 source 'https://rails-assets.org' do
   gem 'rails-assets-classnames'
 end
-
-gem 'acts_as_votable'
-
+# Use Font-Awesome for Icon-Fonts
+gem 'font-awesome-rails'
+# Use simple forms for simpler forms
+gem 'simple_form'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
+# Use GravTastic to add Gravatars to your Rubies or Javascripts
+gem 'gravtastic'
+# Use HTTParty to manage API Calls
 gem 'httparty', '0.13.5'
-
+# API wrappers - Use Octokit for Github API - Use RubyHackernews for HN - Use Github for Github
+gem "octokit", "~> 4.0"
+gem 'ruby-hackernews', '~> 1.4'
+gem "github_api"
+# Use Multi-XML for XML parsing
+gem 'multi_xml', '~> 0.5.5'
+# Secure environment through application.yml added to git ignore
+gem 'figaro'
+# Use JBuilder to build JSON APIs
+gem 'jbuilder', '~> 2.5'
+# Use Redis adapter to run Action Cable in production
+gem 'redis', '~> 3.0'
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+# Use Devise
+gem 'devise'
+gem 'rails_admin'
+# Facebook Authentication using OminAuth-fb
+gem 'omniauth-facebook'
+# Use Capistrano for deployment
+gem 'capistrano-rails', group: :development
+# Use Faker to generate fake data
+gem 'faker'
+# Use Kaminari for pagination
+gem 'kaminari'
+# Use CarrierWave, to deal with file uploads
+gem 'carrierwave', '~> 1.0'
+# Use Cloudinary as image back-end
+gem 'cloudinary'
+# Use Attachinary to handle Attachments stored by Cloudinary
+gem 'attachinary'
+# Use Act-As-Votable to allow any model to vote, be voted-on
+gem 'acts_as_votable'
+# Use Annotate to show db schema on in models
+gem 'annotate', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
