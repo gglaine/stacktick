@@ -8,7 +8,7 @@ class Hackernews < ApplicationRecord
     liste.each do |element|
       Hackernews.create!(
         title: element.css(".title>a").text,
-        source: element.css(".title>.sitebit").text.str.gsub(/^"|"$/, '')
+        source: element.css(".title>.sitebit").text.gsub(/^"|"$/, '')
          )
     end
 end
