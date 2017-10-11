@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'techmemes', to: 'techmemes#index'
 
+  get 'hackernews', to: 'hackernews#index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Attachinary::Engine => "/attachinary"
   devise_for :users

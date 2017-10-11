@@ -1,0 +1,2 @@
+module HackernewsHelper
+end

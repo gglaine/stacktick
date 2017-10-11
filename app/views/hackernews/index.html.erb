@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="text-center">
+      <%= @hackernews.each do |h| %>
+        <div class="card">
+          <h3><%= h.title %></h3>
+          <h5><%= h.source %></h5>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

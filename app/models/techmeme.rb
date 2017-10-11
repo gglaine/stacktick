@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: techmemes
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  source     :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 
 class Techmeme < ApplicationRecord
   require 'open-uri'
@@ -8,7 +19,7 @@ class Techmeme < ApplicationRecord
 
     html_doc.search('.itc1').each do |element| # chaque element avec la classe itc1
       Techmeme.create(
-      title: element.css(".ourh").text, # le texte des elements de la classe itc1 avec la classe .ourh
+      title: element.css(".ourh").text, # texte des balises itc1 avec la classe .ourh
       source: element.css(".ourh").map { |link| link['href'].to_s })
       # Techmeme.create
     end
