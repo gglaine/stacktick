@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+
+
   get 'archives/index'
 
   get 'users/show'
@@ -6,6 +9,8 @@ Rails.application.routes.draw do
   get 'techmemes', to: 'techmemes#index'
 
   get 'hackernews', to: 'hackernews#index'
+
+  get 'techcrunches', to: 'techcrunches#index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Attachinary::Engine => "/attachinary"
