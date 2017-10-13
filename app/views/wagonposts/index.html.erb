@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="text-center">
+      <% @wagonposts.each do |w| %>
+        <div class="card">
+          <h3><%= w.title %></h3>
+          <p><%= w.description %></p>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012075827) do
+ActiveRecord::Schema.define(version: 20171013094538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,12 @@ ActiveRecord::Schema.define(version: 20171012075827) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "stack_exchanges", force: :cascade do |t|
+    t.string   "questions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "techcrunches", force: :cascade do |t|
     t.string   "title"
     t.string   "excerpt"
@@ -120,6 +126,13 @@ ActiveRecord::Schema.define(version: 20171012075827) do
     t.datetime "updated_at"
     t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
+  end
+
+  create_table "wagon_posts", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
   end
 
   add_foreign_key "comments", "articles"

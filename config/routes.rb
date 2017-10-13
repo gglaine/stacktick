@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
 
 
+  get 'wagonposts/index'
+
+  get 'wagonposts/create'
+
   get 'archives/index'
 
   get 'users/show'
@@ -11,6 +15,8 @@ Rails.application.routes.draw do
   get 'hackernews', to: 'hackernews#index'
 
   get 'techcrunches', to: 'techcrunches#index'
+
+  get 'lewagon/blog', to: 'wagonsposts#index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Attachinary::Engine => "/attachinary"

@@ -1,0 +1,2 @@
+module WagonpostsHelper
+end
