@@ -5,10 +5,12 @@
       <div class="col-xs-12 col-md-8">
         <h3>Latest HackerNews >>></h3>
         <% get_latest_hn.each do |hn| %>
-          <div class="card-article">
+        <%= link_to "#{hn.source}" do %>
+          <div class="card">
                 <h3><%= hn.title %></h3>
                 <h5><%= hn.source %></h5>
           </div>
+          <% end %>
         <% end %>
       </div>
 

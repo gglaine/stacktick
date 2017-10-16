@@ -17,9 +17,11 @@ class Hackernews < ApplicationRecord
 
     liste = doc.search('.athing')
     liste.each do |element|
+      source = element.css(".title>a").map { |link| link['href'].to_s }
       Hackernews.create!(
         title: element.css(".title>a").text,
-        source: element.css(".title>.sitebit").text.gsub(/^"|"$/, '')
+        # source: element.css(".title>.sitebit").text.gsub(/^"|"$/, '')
+        source: source[0].gsub(/^\W{2}https:\/\/|"\W$/, " ")
          )
     end
 end
