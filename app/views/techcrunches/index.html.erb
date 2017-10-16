@@ -3,11 +3,13 @@
     <div class="col-xs-12 col-md-10 col-md-offset-1">
       <div class="text-center">
       <% @techcrunches.each do |t| %>
-        <div class="card">
-          <h3><%= t.title %></h3>
-          <h5><%= t.excerpt %></h5>
-          <p><%= t.url %></p>
-        </div>
+        <%= link_to "#{t.url}" do %>
+          <div class="card">
+            <h3><%= t.title %></h3>
+            <h5><%= t.excerpt %></h5>
+         <!--    <p><%= t.url %></p> -->
+          </div>
+        <% end %>
       <% end %>
       </div>
     </div>

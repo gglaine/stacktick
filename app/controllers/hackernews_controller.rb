@@ -1,5 +1,6 @@
 class HackernewsController < ApplicationController
   skip_before_action :authenticate_user!
+
   def new
     @hackernew = Hackernews.new
   end
