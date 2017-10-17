@@ -21,7 +21,7 @@ class Hackernews < ApplicationRecord
       Hackernews.create!(
         title: element.css(".title>a").text,
         # source: element.css(".title>.sitebit").text.gsub(/^"|"$/, '')
-        source: source[0].gsub(/^\W{2}https:\/\/|"\W$/, " ")
+        source: source[0]
          )
     end
 end

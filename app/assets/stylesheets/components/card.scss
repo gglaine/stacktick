@@ -49,15 +49,22 @@
   color: $yellow;
 }
 
+.card-article h3 {
+  font-size: 14px;
+  color: $yellow;
+}
+
 .card-article h4 {
   color: $lighter-gray;
   font-size: 14px;
 }
 
 .card-article h5 {
-  &hover {
-    color: red;
-  }
+  color: $gray;
+}
+
+.card-article p {
+  color: $lighter-gray;
 }
 
 .card-article-mini h5 {
@@ -137,14 +144,6 @@ color: $yellow;
   }
 }
 
-.card-article:hover {
-  cursor: pointer;
-  margin-bottom: 1px solid red;
-  background: $gray;
-  h1 {
-    font-size: 14px;
-  }
-}
 
 .card-article-header-top {
   background: transparent;

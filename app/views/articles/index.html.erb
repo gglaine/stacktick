@@ -3,12 +3,12 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8">
-        <h3>Latest HackerNews >>></h3>
+        <h4>Latest on HackerNews >>></h4>
         <% get_latest_hn.each do |hn| %>
         <%= link_to "#{hn.source}" do %>
-          <div class="card">
+          <div class="card-article">
                 <h3><%= hn.title %></h3>
-                <h5><%= hn.source %></h5>
+<!--                 <h5><%= hn.source %></h5> -->
           </div>
           <% end %>
         <% end %>
@@ -16,23 +16,11 @@
 
     <div class="col-md-4">
       <div class="card" id="maincard" >
-        <h3>Search ></h3>
-          <form action="" class="navbar-wagon-search">
-            <input type="text" class="navbar-wagon-search-input" placeholder="Search articles">
-            <button type="submit" class="navbar-wagon-search-btn">
-              <i class="fa fa-search"></i>
-            </button>
-          </form>
         <h3>Find_by source: </h3>
         <h5><%= link_to 'TechMeme', techmemes_path %></h5>
         <h5><%= link_to 'HackerNews', hackernews_path %></h5>
         <h5><%= link_to 'Techcrunch', techcrunches_path %></h5>
         <h5><%= link_to 'Le Wagon', wagonposts_index_path %></h5>
-        <h5>StackExchange</h5>
-        <h5>GitHub</h5>
-        <h5>Reddit</h5>
-        <h5>Motherboard</h5>
-        <h5>Wired</h5>
       <h3>Popular >>></h3>
         <h5><a href="#">  Most popular</a> . <a href="#">See all</a></h5>
         <% @articles.reverse_each do |article| %>
