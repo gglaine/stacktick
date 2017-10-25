@@ -3,15 +3,18 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8">
-        <h4>Latest on HackerNews >>></h4>
+        <h4>>>> Latest on HackerNews </h4>
+
         <% get_latest_hn.each do |hn| %>
-        <%= link_to "#{hn.source}" do %>
-          <div class="card-article">
-                <h3><%= hn.title %></h3>
-<!--                 <h5><%= hn.source %></h5> -->
-          </div>
+          <%= link_to "#{hn.source}" do %>
+            <div class="card-article">
+              <h3><%= hn.title %></h3>
+            </div>
           <% end %>
         <% end %>
+        <div class="pagination-controls">
+          <%= paginate @hackernews %>
+        </div>
       </div>
 
     <div class="col-md-4">

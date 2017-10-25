@@ -12,5 +12,6 @@ class HackernewsController < ApplicationController
 
   def index
     @hackernews = Hackernews.all
+    @hackernews = Kaminari.paginate_array(@hackernews).page(params[:page]).per(25)
   end
 end

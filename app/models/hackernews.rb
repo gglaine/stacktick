@@ -10,6 +10,7 @@
 #
 
 class Hackernews < ApplicationRecord
+
   require 'open-uri'
   require 'nokogiri'
     html_file = open("https://news.ycombinator.com/news")
@@ -24,4 +25,6 @@ class Hackernews < ApplicationRecord
         source: source[0]
          )
     end
+
+
 end

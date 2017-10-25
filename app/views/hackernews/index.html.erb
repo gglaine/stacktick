@@ -7,6 +7,7 @@
             <%= image_tag('hacker-news-logo.jpg') %>
           <% end %>
         </div>
+      <%= paginate @hackernews %>
       <% @hackernews.each do |h| %>
         <div class="card">
           <h3><%= h.title %></h3>
