@@ -2,11 +2,11 @@
 .navbar-wagon {
   background: $darker-gray;
   display: flex;
-  height: 60px;
-  padding: 0px 30px;
+  height: 62px;
+  padding: 0px 10px;
   align-items: center;
   justify-content: space-between;
-  color: $yellow;
+  color: $darker-gray;
 }
 
 
@@ -29,8 +29,9 @@
 
 .navbar-wagon h1 {
   font: 100% $header-font;
-  color: $yellow;
+  color: #17af41;
   font-size: 18px;
+  font-family: 'Russo One', sans-serif;
   font-weight: bold;
   display: inline-block;
   letter-spacing: 4px;

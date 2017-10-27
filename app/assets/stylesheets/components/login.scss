@@ -10,6 +10,7 @@
 
 .modal-header h2 {
   font-family: 'Russo One', sans-serif;
+  margin-top: -4px;
 }
 
 .modal-header h3 {
@@ -20,6 +21,8 @@
 
 .modal-header {
   background: $flash-green;
+      background: #38e41e;
+    height: 50px;
 }
 
 .modal-body {
@@ -36,6 +39,8 @@
 }
 
 #login-modal-background {
-background: linear-gradient(-2deg, transparent 10%, rgba(75, 79, 88, 0) 38%);
+// background: linear-gradient(-2deg, transparent 10%, rgba(75, 79, 88, 0) 38%);
+    background: black;
+    opacity: 0.84;
 }
 
