@@ -41,7 +41,6 @@ ul {
 
 a {
   text-decoration: none !important;
-  color: black !important;
 }
 
 .jumbotron {
@@ -93,5 +92,7 @@ color: $lighter-gray;
   text-align: center;
 }
 
-
+.hlink:hover {
+  background: $violet;
+}
 

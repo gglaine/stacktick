@@ -1,6 +1,16 @@
 #maincard {
   padding-left: 0px;
   margin-left: 0px;
+  a {
+    color: $green-text;
+  }
+  h5{
+    text-align: center;
+  }
+}
+
+#maincard a:hover{
+  color: $violet;
 }
 
 .card-course {
@@ -25,6 +35,14 @@
   margin-bottom: 4px;
   border-radius: 4px;
   width: 100%;
+}
+
+.card-article:hover {
+  background: $dark-gray;
+  h3 {
+     color: $violet;
+  }
+
 }
 
 .card-article-items {
@@ -67,13 +85,7 @@
   color: $lighter-gray;
 }
 
-.card-article-mini h5 {
-color: $yellow;
-}
 
-.card-article-mini strong {
-  color: $gray;
-}
 
 .fa {
   color: silver;
@@ -234,10 +246,10 @@ color: $yellow;
   font: 100% $header-font;
   opacity: 1;
   h1 {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 3px;
     padding-left: 3px;
-    color: $yellow;
+    color: $green-text;
   }
   ul {
     padding-left: 0px;
@@ -246,6 +258,15 @@ color: $yellow;
     background: $gray;
     transition: 0.2s;
   }
+  h5 {
+  color: $red-gold;
+  }
+}
+
+
+
+.card-article-mini strong {
+  color: $green-text;
 }
 
 .card-article-mini img {

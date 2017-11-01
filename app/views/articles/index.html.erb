@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8">
-        <h4>>>> Latest on HackerNews </h4>
+        <h4 class="text-center">Latest on HackerNews </h4>
 
         <% get_latest_hn.each do |hn| %>
           <%= link_to "#{hn.source}" do %>
@@ -19,22 +19,21 @@
 
     <div class="col-md-4">
       <div class="card" id="maincard" >
-        <h3>Find_by source: </h3>
+        <h3 class="text-center">By [:source] </h3>
         <h5><%= link_to 'TechMeme', techmemes_path %></h5>
         <h5><%= link_to 'HackerNews', hackernews_path %></h5>
         <h5><%= link_to 'Techcrunch', techcrunches_path %></h5>
         <h5><%= link_to 'Le Wagon', wagonposts_index_path %></h5>
-      <h3>Popular >>></h3>
-        <h5><a href="#">  Most popular</a> . <a href="#">See all</a></h5>
+      <h3 class="text-center">Most Disruptive</h3>
         <% @articles.reverse_each do |article| %>
         <div class="card-article-mini">
           <ul>
             <li>
             <%= link_to article_path(article) do %>
             <div class="text-center">
-              <h1><%= article.title.capitalize %> </h1>
-              <strong><%= article.publisher %></strong>
-              <h5><%= article.created_at.strftime("%d/%m/%Y") %></h5>
+              <h1><strong><%= article.title.capitalize %></strong> </h1>
+ <!--              <strong><%= article.publisher %></strong> -->
+<!--               <h5><%= article.created_at.strftime("%d/%m/%Y") %></h5> -->
             </div>
             <% end %>
             </li>
