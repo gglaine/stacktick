@@ -1,10 +1,11 @@
 
-<div class="wrapper-green">
+<div class="wrapper-white">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-8">
-        <h4 class="text-center">Latest on HackerNews </h4>
-
+        <div class="card-block-header">
+          <h4 class="text-center">HackerNews / Latest </h4>
+        </div>
         <% get_latest_hn.each do |hn| %>
           <%= link_to "#{hn.source}" do %>
             <div class="card-article">
@@ -19,12 +20,17 @@
 
     <div class="col-md-4">
       <div class="card" id="maincard" >
-        <h3 class="text-center">By [:source] </h3>
+        <div class="card-block-header">
+          <h4 class="text-center">Search sources </h4>
+        </div>
         <h5><%= link_to 'TechMeme', techmemes_path %></h5>
         <h5><%= link_to 'HackerNews', hackernews_path %></h5>
         <h5><%= link_to 'Techcrunch', techcrunches_path %></h5>
         <h5><%= link_to 'Le Wagon', wagonposts_index_path %></h5>
-      <h3 class="text-center">Most Disruptive</h3>
+
+        <div class="card-block-header">
+            <h4 class="text-center">Hand picks</h4>
+        </div>
         <% @articles.reverse_each do |article| %>
         <div class="card-article-mini">
           <ul>

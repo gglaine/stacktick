@@ -19,6 +19,13 @@
   margin-left: 0px;
 }
 
+.wrapper-white {
+  background: rgba(250, 251, 255, 0.8);
+  width: 100% !important;
+  padding: 0px !important;
+  margin-left: 0px;
+}
+
 #mainrow {
   background: #FFFFFF;
   padding-bottom: 20px;
@@ -95,4 +102,73 @@ color: $lighter-gray;
 // .hlink:hover {
 //   background: $violet;
 // }
+//
+#dots-box {
+  height: 14px;
+  width: 14px;
+  background: transparent;
+  position : relative;
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  // border: 2px solid black;
+  // border-radius: 50%;
+}
+
+#top-left {
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  animation-duration: 0.4s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+  from {
+    background: green;
+  }
+
+  to {
+    background: red;
+  }
+}
+
+#btm-left {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: green;
+}
+
+#top-right {
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  animation-duration: 0.5s;
+  animation-name: blink-red;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink-red {
+  from {
+    background: green;
+  }
+
+  to {
+    background: red;
+  }
+}
+
+#btm-right {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: green;
+}
 

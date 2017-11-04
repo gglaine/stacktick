@@ -1,3 +1,16 @@
+.card-block-header {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+  background: #454851;
+  h4 {
+    color: $violet;
+    font-size: 12px;
+  }
+}
+
 #maincard {
   padding-left: 0px;
   margin-left: 0px;
@@ -29,12 +42,13 @@
 
 .card-article {
   padding-bottom: 10px;
-  background: $darker-gray;
+  background: rgba(41, 40, 40, 0.05);
   padding: 2px 12px;
   /* border: 1px groove #727274; */
   margin-bottom: 4px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .card-article:hover {
@@ -236,7 +250,7 @@
 .card-article-mini{
   position: relative;
   width:100%;
-  background: $darker-gray;
+  background: rgba(234, 234, 234, 0.23);
   margin-top: 5px;
   margin-bottom: 5px;
   padding-left: 10px;
@@ -255,7 +269,7 @@
     padding-left: 0px;
   }
     &:hover {
-    background: $gray;
+    background: $violet;
     transition: 0.2s;
   }
   h5 {
@@ -266,7 +280,7 @@
 
 
 .card-article-mini strong {
-  color: $green-text;
+  color: #5a1023;
 }
 
 .card-article-mini img {
