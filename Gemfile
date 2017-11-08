@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 ruby '2.3.1'
+
+  gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
@@ -47,6 +49,8 @@ gem "octokit", "~> 4.0"
 gem 'ruby-hackernews', '~> 1.4'
 gem "github_api"
 # Use Multi-XML for XML parsing
+#
+gem 'rest-client'
 gem 'multi_xml', '~> 0.5.5'
 # Secure environment through application.yml added to git ignore
 gem 'figaro'
@@ -91,6 +95,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
