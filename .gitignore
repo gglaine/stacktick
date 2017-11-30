@@ -27,3 +27,5 @@ public/assets
 /config/application.yml
 /config/cloudinary.yml
 /config/secrets.yml
+
+.env
