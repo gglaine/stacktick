@@ -1,14 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <div class="text-center">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <%= render 'shared/sources-menu' %>
       <% @wagonposts.each do |w| %>
-        <div class="card">
+        <div class="card-article">
           <h3><%= w.title %></h3>
           <p><%= w.description %></p>
         </div>
       <% end %>
-      </div>
     </div>
   </div>
 </div>

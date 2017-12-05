@@ -1,19 +1,18 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <div class="text-center">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <%= render 'shared/sources-menu' %>
         <div id="logo-techmeme">
-          <%= link_to("https://news.ycombinator.com/") do %>
-            <%= image_tag('hacker-news-logo.jpg') %>
-          <% end %>
+          <h5>HACKERNEWS - Latest Posts</h5>
         </div>
-      <%= paginate @hackernews %>
+      <div class="text-center">
       <% @hackernews.each do |h| %>
-        <div class="card">
+        <div class="card-article">
           <h3><%= h.title %></h3>
-          <h5><%= h.source %></h5>
+          <p><%= h.source %></p>
         </div>
       <% end %>
+      <%= paginate @hackernews %>
       </div>
     </div>
   </div>

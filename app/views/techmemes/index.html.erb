@@ -1,14 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <div class="text-center">
-        <div id="logo-techmeme">
-          <%= link_to("http://www.techmeme.com") do %>
-            <%= image_tag('techmeme135') %>
-          <% end %>
-        </div>
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <%= render 'shared/sources-menu' %>
+      <h5>TECHMEME - Latest</h5>
       <% @techmemes.each do |t| %>
-        <div class="card">
+        <div class="card-article">
           <h3><%= t.title %></h3>
           <h5><%= t.source %></h5>
         </div>

@@ -2,6 +2,11 @@
 <div class="wrapper-white">
   <div class="container">
     <div class="row">
+      <div class="col-xs-12 ">
+        <%= render 'shared/sources-menu' %>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-xs-12 col-md-8">
         <div class="card-block-header">
           <h4 class="text-center">HackerNews / Latest </h4>
@@ -20,13 +25,7 @@
 
     <div class="col-md-4">
       <div class="card" id="maincard" >
-        <div class="card-block-header">
-          <h4 class="text-center">Search sources </h4>
-        </div>
-        <h5><%= link_to 'TechMeme', techmemes_path %></h5>
-        <h5><%= link_to 'HackerNews', hackernews_path %></h5>
-        <h5><%= link_to 'Techcrunch', techcrunches_path %></h5>
-        <h5><%= link_to 'Le Wagon', wagonposts_index_path %></h5>
+
 
         <div class="card-block-header">
             <h4 class="text-center">Hand picks</h4>
