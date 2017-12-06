@@ -1,3 +1,6 @@
+.modal-header {
+  background: silver;
+}
 
 .modal-header img {
   width: 250px;
@@ -9,8 +12,8 @@
 }
 
 .modal-header h2 {
-  font-family: 'Russo One', sans-serif;
-  margin-top: -4px;
+  font-family: $header-font, sans-serif;
+  font-size: 18px;
 }
 
 .modal-header h3 {
@@ -19,11 +22,7 @@
   font-family: 'Russo One', sans-serif;
 }
 
-.modal-header {
-  background: $flash-green;
-      background: #38e41e;
-    height: 50px;
-}
+
 
 .modal-body {
   opacity: 0.9;
@@ -35,7 +34,7 @@
 }
 
 .modal-content {
-  border-radius: 8px;
+  border: none;
 }
 
 #login-modal-background {

@@ -6,6 +6,31 @@
   margin-left: 0px;
 }
 
+.wrapper-subnav {
+  background: #5f626d;
+  padding-top: 0px;
+    margin-top: -10px;
+}
+
+@media screen and (max-width: 800px) {
+  .menu-sources {
+    flex-direction: column;
+  }
+  .menu-sources h5 {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+
+  .wrapper-subnav {
+    background: black;
+  }
+}
+
 .wrapper-gray {
   background: #39b377;
   height: 100vh;
@@ -176,5 +201,9 @@ color: $lighter-gray;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  a {
+    color: #c5c5c5;
+    font-size: 12px;
+  }
 }
 

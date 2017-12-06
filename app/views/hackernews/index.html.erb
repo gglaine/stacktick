@@ -1,18 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <%= render 'shared/sources-menu' %>
+<div class="wrapper-subnav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <%= render 'shared/sources-menu' %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
         <div id="logo-techmeme">
           <h5>HACKERNEWS - Latest Posts</h5>
         </div>
-      <div class="text-center">
-      <% @hackernews.each do |h| %>
-        <div class="card-article">
-          <h3><%= h.title %></h3>
-          <p><%= h.source %></p>
+        <div class="text-center">
+        <% @hackernews.each do |h| %>
+          <div class="card-article">
+            <%= link_to("#{h.source}") do %>
+            <h3><%= h.title %></h3>
+   <!--          <p><% h.source %></p> -->
+            <% end %>
+          </div>
+        <% end %>
+        <%= paginate @hackernews %>
         </div>
-      <% end %>
-      <%= paginate @hackernews %>
       </div>
     </div>
   </div>

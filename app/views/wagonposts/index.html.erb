@@ -1,13 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <%= render 'shared/sources-menu' %>
-      <% @wagonposts.each do |w| %>
-        <div class="card-article">
-          <h3><%= w.title %></h3>
-          <p><%= w.description %></p>
-        </div>
-      <% end %>
+<div class="wrapper-subnav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <%= render 'shared/sources-menu' %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h5>LE WAGON BLOG - LATEST</h5>
+        <% @wagonposts.each do |w| %>
+          <div class="card-article">
+            <%= link_to("https://www.lewagon.com/fr/blog/") do %>
+              <h3><%= w.title %></h3>
+              <p><%= w.description %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -1,7 +1,16 @@
+<div class="wrapper-subnav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <%= render 'shared/sources-menu' %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper-white">
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <%= render 'shared/sources-menu' %>
+    <div class="col-xs-12">
       <h5>TECHMEME - Latest</h5>
       <% @techmemes.each do |t| %>
         <div class="card-article">

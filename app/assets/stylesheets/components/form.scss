@@ -46,16 +46,16 @@ margin-top: 15px;
   /* margin-top: 5px; */
   /* margin-bottom: 5px; */
   text-align: center;
-  background: $flash-green;
-  color: $dark-gray;
-  font-family: 'Russo One', sans-serif;
-  height: 50px;
+  background: #25232357;
+  color: #fdfdfd;
+  font-family: 'Montserrat', sans-serif;
+  /* height: 50px; */
   width: 100%;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   opacity: 1;
   border: none;
   letter-spacing: 1.3px;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   &:hover {
     border-radius: 8px;
     border: 2px solid $bright-yellow;
@@ -88,21 +88,22 @@ margin-top: 15px;
 .signup-button {
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right:10px;
+  margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
   height: 40px;
-  width:100%;
+  width: 100%;
   text-align: center;
   color: #ffffff;
-      border: 2px groove white;
+  /* border: 2px groove white; */
   border-radius: 3px;
-  background: #ffffff;
-  font-family: 'Russo One', sans-serif;
+  /* background: #ffffff; */
+  /* font-family: 'Russo One', sans-serif; */
   letter-spacing: 1.3px;
-  font-size: 16px;
+  font-size: 14px;
   &:hover {
-    background: #fffdee;
+    border: 2px solid $bright-yellow;
+    border-radius: 8px;
   }
 }
 
