@@ -1,19 +1,16 @@
-<div class="modal fade " id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade " id="logup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button class="close" data-dismiss="modal">x</button>
-          <%= image_tag "plume.png" %>
         <div class="text-center">
-          <h3>My Little Big Blog</h3>
-          <p>Créer un compte</p>
+          <h2>S:gn Up</h2>
         </div>
       </div>
+
       <div class="modal-body">
         <div class="row">
           <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <h2>Sign up</h2>
-
             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
               <%= devise_error_messages! %>
 
@@ -25,17 +22,6 @@
               <div class="field">
                 <%= f.label :username %><br />
                 <%= f.text_field :username, autofocus: true %>
-              </div>
-
-
-              <div class="field">
-                <%= f.label :first_name %><br />
-                <%= f.text_field :first_name, autofocus: true %>
-              </div>
-
-              <div class="field">
-                <%= f.label :last_name %><br />
-                <%= f.text_field :last_name, autofocus: true %>
               </div>
 
               <div class="field">
@@ -52,11 +38,11 @@
               </div>
 
               <div class="actions">
-                <%= f.submit "Créer le compte" %>
+                <%= f.submit "S:gn Up" %>
               </div>
             <% end %>
 
-            <%= render "devise/shared/links" %>
+            <% render "devise/shared/links" %>
           </div>
         </div>
       </div>
