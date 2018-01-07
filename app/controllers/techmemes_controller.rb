@@ -11,6 +11,7 @@ class TechmemesController < ApplicationController
   end
 
   def index
-    @techmemes = Techmeme.all
+    @techmemes = Techmeme.all.order('id DESC')
+    @techmemes = Kaminari.paginate_array(@techmemes).page(params[:page]).per(25)
   end
 end

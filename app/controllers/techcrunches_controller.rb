@@ -13,5 +13,6 @@ class TechcrunchesController < ApplicationController
 
   def index
     @techcrunches = Techcrunch.all
+    @techcrunches = Kaminari.paginate_array(@techcrunches).page(params[:page]).per(25)
   end
 end

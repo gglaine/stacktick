@@ -1,23 +1,14 @@
-<div class="wrapper-subnav">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 ">
-        <%= render 'shared/sources-menu' %>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="wrapper-white">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h5>TECHCRUNCH - LATEST</h5>
         <div class="text-center">
+          TECHCRUNCHES LATEST
         <% @techcrunches.each do |t| %>
           <%= link_to "#{t.url}" do %>
             <div class="card-article">
               <h3><%= t.title %></h3>
-              <p><%= t.excerpt %></p>
+              <p><% t.excerpt %></p>
       <!--         <p><%= t.url %></p> -->
             </div>
           <% end %>

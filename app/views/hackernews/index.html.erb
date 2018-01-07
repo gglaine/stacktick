@@ -1,25 +1,14 @@
-<div class="wrapper-subnav">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 ">
-        <%= render 'shared/sources-menu' %>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="wrapper-white">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div id="logo-techmeme">
-          <h5>HACKERNEWS - Latest Posts</h5>
-        </div>
         <div class="text-center">
+          HACKERNEWS
         <% @hackernews.each do |h| %>
           <div class="card-article">
             <%= link_to("#{h.source}") do %>
             <h3><%= h.title %></h3>
-   <!--          <p><% h.source %></p> -->
+             <p><% h.source %></p>
             <% end %>
           </div>
         <% end %>

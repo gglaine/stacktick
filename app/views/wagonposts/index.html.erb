@@ -1,22 +1,15 @@
-<div class="wrapper-subnav">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 ">
-        <%= render 'shared/sources-menu' %>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="wrapper-white">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h5>LE WAGON BLOG - LATEST</h5>
+        <div class="text-center">
+          <h5>Le Wagon - Latest Posts</h5>
+        </div>
         <% @wagonposts.each do |w| %>
           <div class="card-article">
             <%= link_to("https://www.lewagon.com/fr/blog/") do %>
               <h3><%= w.title %></h3>
-              <p><%= w.description %></p>
+              <p><% w.description %></p>
             <% end %>
           </div>
         <% end %>

@@ -11,6 +11,19 @@
   padding-left: 16px;
 }
 
+#hamburger {
+  width: 100%;
+  text-align: center;
+  li:hover {
+  background: red;
+  }
+}
+
+#hamburger li:hover  {
+  a {
+    color: white;
+  }
+}
 
 
 /* Optional class to fix the navbar on top */
@@ -41,13 +54,13 @@
 }
 
 .navbar-signup {
-  color: #ffffff;
-  border: 2px yellow;
-  border-radius: 20%;
-  padding: 5px;
-  width: 120px;
+  color: #454a77;
+  /* border: 2px yellow; */
+  /* border-radius: 4px; */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
   a {
-    color: #8a8770 !important;
+    color: #4d1a8c !important;
   }
 }
 
@@ -159,7 +172,7 @@
 
 /* Navbar dropdown menu */
 .navbar-wagon-dropdown-menu {
-  margin-top: 15px;
+  // margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
@@ -173,7 +186,7 @@
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  color: white!important;
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
@@ -199,5 +212,10 @@
   &:hover {
     border-bottom: 2px solid silver;
   }
+}
+
+.fa-bars h5 {
+  display: inline;
+  padding-left: 10px;
 }
 

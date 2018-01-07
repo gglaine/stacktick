@@ -1,27 +1,8 @@
-
-<div class="wrapper-subnav">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 ">
-        <%= render 'shared/sources-menu' %>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="wrapper-white">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div class="card" id="maincard" >
-          <div class="card-block-header">
-            <h4 class="text-center">Top of the stack</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12">
-        <div class="card-block-header">
-          <h4 class="text-center">HackerNews / Latest </h4>
-        </div>
+        <h5 id="hfive">HACKERNEWS</h5>
         <% get_latest_hn.each do |hn| %>
           <%= link_to "#{hn.source}" do %>
             <div class="card-article">
@@ -33,7 +14,5 @@
           <%= paginate @hackernews %>
         </div>
       </div>
-
-
   </div>
 </div>

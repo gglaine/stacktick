@@ -41,22 +41,26 @@
         </div>
       </div>
     <% else %>
-    <div class="navbar-signup">
-      <%= link_to "Sign-in", "#login", "data-toggle" => "modal"%> |
-      <%= link_to " Sign-up", "#logup", "data-toggle" => "modal"%>
-    </div>
-    <% end %>
-  </div>
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
+
+
+
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu" id="hamburger">
         <li><%= link_to "HACKERNEWS", hackernews_path %></li>
         <li><%= link_to "TECHCRUNCH", techcrunches_path %></li>
         <li><%= link_to "TECHMEME", techmemes_path  %></li>
         <li><%= link_to "LE WAGON", wagonposts_index_path %></li>
       </ul>
+
+
+    <% end %>
+  </div>
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-wagon-item">
+    <div class="navbar-signup">
+      <%= link_to "Sign-in", "#login", "data-toggle" => "modal"%>
+      |
+      <%= link_to " Sign-up", "#logup", "data-toggle" => "modal"%>
     </div>
   </div>
 </div>

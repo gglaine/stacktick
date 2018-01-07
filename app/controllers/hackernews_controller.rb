@@ -11,7 +11,7 @@ class HackernewsController < ApplicationController
   end
 
   def index
-    @hackernews = Hackernews.all
-    @hackernews = Kaminari.paginate_array(@hackernews).page(params[:page]).per(25)
+    @hackernews = Hackernews.order('created_at DESC').last(150)
+    @hackernews = Kaminari.paginate_array(@hackernews).page(params[:page]).per(100)
   end
 end

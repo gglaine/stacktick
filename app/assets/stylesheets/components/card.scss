@@ -12,6 +12,13 @@
   }
 }
 
+
+#hfive {
+  border-bottom: 2px solid silver;
+  padding-bottom: 4px;
+  font-size: 10px;
+}
+
 #maincard {
   padding-left: 0px;
   margin-left: 0px;
@@ -20,6 +27,7 @@
   }
   h5{
     text-align: center;
+    font-size: 10px;
   }
 }
 
@@ -94,8 +102,8 @@
 
 .card-article h5 {
   color: $gray;
+  font-size: 10px;
 }
-
 .card-article p {
   color: $lighter-gray;
 }
