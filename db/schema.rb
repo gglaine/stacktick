@@ -71,12 +71,6 @@ ActiveRecord::Schema.define(version: 20171013094538) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "stack_exchanges", force: :cascade do |t|
-    t.string   "questions"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "techcrunches", force: :cascade do |t|
     t.string   "title"
     t.string   "excerpt"

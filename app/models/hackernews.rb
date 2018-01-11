@@ -13,6 +13,8 @@ class Hackernews < ApplicationRecord
 
   require 'open-uri'
   require 'nokogiri'
+  # hackernews = Hackernews.all
+  # Hackernews.where.not(id: Hackernews.group(:title, :source).pluck('min(hackernews.id)')).delete_all
     html_file = open("https://news.ycombinator.com/news")
     doc = Nokogiri::HTML(html_file)
 
@@ -21,10 +23,7 @@ class Hackernews < ApplicationRecord
       source = element.css(".title>a").map { |link| link['href'].to_s }
       Hackernews.create!(
         title: element.css(".title>a").text,
-        # source: element.css(".title>.sitebit").text.gsub(/^"|"$/, '')
         source: source[0]
-         )
+      )
     end
-
-
 end
