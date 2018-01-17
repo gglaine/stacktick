@@ -35,6 +35,13 @@
   color: $violet;
 }
 
+#head-card {
+  margin: 10px;
+  img {
+    width: 80px;
+  }
+}
+
 .card-course {
   border: 1px groove silver;
   border-radius: 4px;
@@ -50,9 +57,13 @@
 }
 
 .card-article {
+  position: relative;
   padding-bottom: 10px;
+  background: #f1f0ee85;
+  margin-bottom: 2px;
   padding: 2px 12px;
   text-align: justify;
+  border-radius: 3px;
   /* border: 1px groove #727274; */
   /* margin-bottom: 4px; */
   /* border-radius: 4px; */
@@ -101,18 +112,40 @@
 }
 
 .card-article h5 {
-  color: $gray;
-  font-size: 10px;
+  color: #4e4c4c;
+  font-weight: 300;
+  font-size: 12px;
+  max-width: 75%;
+  line-height: 12px;
 }
 .card-article p {
   color: $lighter-gray;
 }
 
+.card-article .fa-star-o {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+.card-article .fa-floppy-o {
+  position: absolute;
+  top: 12px;
+  right: 35px;
+}
+
+.card-article .fa-heart-o {
+  position: absolute;
+  top: 12px;
+  right: 55px;
+}
+
 
 
 .fa {
-  color: silver;
+  color: black;
 }
+
 
 .card-article .fa.fa-comment-o {
   margin-right: 1px;

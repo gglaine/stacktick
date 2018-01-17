@@ -11,7 +11,7 @@
 
 class Hackernews < ApplicationRecord
 
-  validates :title, uniqueness: true
+  # validates :title, uniqueness: true
 
   require 'open-uri'
   require 'nokogiri'
