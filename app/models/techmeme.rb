@@ -11,6 +11,8 @@
 
 
 class Techmeme < ApplicationRecord
+  validates :title, uniqueness: true
+
   require 'open-uri'
   require 'nokogiri'
 

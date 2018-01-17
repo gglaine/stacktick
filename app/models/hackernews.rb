@@ -11,7 +11,7 @@
 
 class Hackernews < ApplicationRecord
 
-  # validates :title, uniqueness: true
+  validates :title, uniqueness: true
 
   require 'open-uri'
   require 'nokogiri'
@@ -23,7 +23,7 @@ class Hackernews < ApplicationRecord
     liste = doc.search('.athing')
     liste.each do |element|
       source = element.css(".title>a").map { |link| link['href'].to_s }
-      Hackernews.create!(
+      Hackernews.create(
         title: element.css(".title>a").text,
         source: source[0]
       )
