@@ -24,4 +24,11 @@ class Techmeme < ApplicationRecord
       )
       # Techmeme.create
     end
+    def self.dedupe
+      grouped = all.group_by{|model| [model.title] }
+      grouped.values.each do |duplicates|
+        first_one = duplicates.shift
+        duplicates.each{ |double| double.destroy }
+      end
+    end
 end
