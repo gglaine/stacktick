@@ -2,14 +2,18 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div class="text-center">
-          <h5>Le Wagon - Latest Posts</h5>
+        <div class="head-card">
+          Latest on Le Wagon
+          <%= image_tag("lw-logo.png") %>
         </div>
         <% @wagonposts.each do |w| %>
           <div class="card-article">
             <%= link_to("https://www.lewagon.com/fr/blog/") do %>
-              <h3><%= w.title %></h3>
+              <h5><%= w.title %></h5>
               <p><% w.description %></p>
+              <i class="fa fa-floppy-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             <% end %>
           </div>
         <% end %>

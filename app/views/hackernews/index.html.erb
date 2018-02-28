@@ -2,18 +2,23 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div class="text-center">
-          HACKERNEWS
+      <div class="head-card">
+          Latest on HackerNews
+          <%= image_tag("hn-logo.png") %>
+
+        </div>
         <% @hackernews.each do |h| %>
           <div class="card-article">
             <%= link_to("#{h.source}") do %>
-            <h3><%= h.title %></h3>
+            <h5><%= h.title %></h5>
              <p><% h.source %></p>
+              <i class="fa fa-floppy-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
             <% end %>
           </div>
         <% end %>
         <%= paginate @hackernews %>
-        </div>
       </div>
     </div>
   </div>

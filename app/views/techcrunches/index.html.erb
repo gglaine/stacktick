@@ -2,18 +2,26 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div class="text-center">
-          TECHCRUNCHES LATEST
+      <div class="head-card">
+          Latest on TECHCRUNCH
+          <%= image_tag("tc-logo.png") %>
+
+        </div>
+
         <% @techcrunches.each do |t| %>
           <%= link_to "#{t.url}" do %>
             <div class="card-article">
-              <h3><%= t.title %></h3>
+              <h5><%= t.title %></h5>
               <p><% t.excerpt %></p>
+              <i class="fa fa-floppy-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
+
       <!--         <p><%= t.url %></p> -->
             </div>
           <% end %>
         <% end %>
-        </div>
+
       </div>
     </div>
   </div>
