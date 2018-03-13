@@ -26,6 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'therubyracer', platforms: :ruby
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 # Use JS-routes to defines all Rails named routes as javascript helpers
 gem 'js-routes', '~> 1.3'
 # Use React-Rails to integrate React views, controllers and the asset pipeline, or webpacker
@@ -42,15 +43,15 @@ gem 'simple_form'
 gem 'turbolinks', '~> 5'
 # Use GravTastic to add Gravatars to your Rubies or Javascripts
 gem 'gravtastic'
-# Use HTTParty to manage API Calls
+# API Calls
 gem 'httparty', '0.13.5'
+gem 'rest-client'
 # API wrappers - Use Octokit for Github API - Use RubyHackernews for HN - Use Github for Github
 gem "octokit", "~> 4.0"
 gem 'ruby-hackernews', '~> 1.4'
 gem "github_api"
 # Use Multi-XML for XML parsing
-#
-gem 'rest-client'
+
 gem 'multi_xml', '~> 0.5.5'
 # Secure environment through application.yml added to git ignore
 gem 'figaro'

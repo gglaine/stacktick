@@ -5,18 +5,29 @@
       <div class="head-card">
           Latest on HackerNews
           <%= image_tag("hn-logo.png") %>
-
         </div>
         <% @hackernews.each do |h| %>
           <div class="card-article">
+
             <%= link_to("#{h.source}") do %>
-            <h5><%= h.title %></h5>
-             <p><% h.source %></p>
-              <i class="fa fa-floppy-o" aria-hidden="true"></i>
-              <i class="fa fa-star-o" aria-hidden="true"></i>
-              <i class="fa fa-heart-o" aria-hidden="true"></i>
+
+              <div class="card-article__title">
+                <%= h.title %>
+              </div>
+              <p><% h.source %></p>
+
             <% end %>
-          </div>
+            <div class="card-article__actions">
+              <div class="post-upvote">
+                <div class="upvote-arrow">
+                  <i class="fa fa-sort-up" aria-hidden="true"></i>
+                </div>
+                <div class="upvote-count">
+                  0
+                </div>
+              </div>
+            </div>
+         </div>
         <% end %>
         <%= paginate @hackernews %>
       </div>

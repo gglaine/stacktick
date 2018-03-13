@@ -13,6 +13,8 @@ class Hackernews < ApplicationRecord
 
   validates :title, uniqueness: true
 
+  acts_as_votable
+
   require 'open-uri'
   require 'nokogiri'
   # hackernews = Hackernews.all
