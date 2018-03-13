@@ -1,13 +1,6 @@
 <div class="navbar-wagon navbar-wagon-fixed">
-  <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-<!--     <div id="dots-box">
-      <div class="dot" id="top-left"></div>
-      <div class="dot" id="top-right"></div>
-      <div class="dot" id="btm-right"></div>
-      <div class="dot" id="btm-left"></div>
-    </div> -->
-    <h1> STACK:TICK</h1>
+    <h1> STACK::TICK</h1>
   <% end %>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -43,28 +36,22 @@
 
   <% else %>
     <!-- if user is not signed in -->
-
-      <div class="navbar-wagon-item">
+  <div class="navbar-wagon-item">
     <div class="navbar-signup">
       <%= link_to "Sign-in", "#login", "data-toggle" => "modal"%>
       |
       <%= link_to " Sign-up", "#logup", "data-toggle" => "modal"%>
     </div>
   </div>
-
-
-    <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu" id="hamburger">
-      <li><%= link_to "HACKERNEWS", hackernews_path %></li>
-      <li><%= link_to "TECHCRUNCH", techcrunches_path %></li>
-      <li><%= link_to "TECHMEME", techmemes_path  %></li>
-      <li><%= link_to "LE WAGON", wagonposts_index_path %></li>
-    </ul>
+  <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+  <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu" id="hamburger">
+    <li><%= link_to "HACKERNEWS", hackernews_path %></li>
+    <li><%= link_to "TECHCRUNCH", techcrunches_path %></li>
+    <li><%= link_to "TECHMEME", techmemes_path  %></li>
+    <li><%= link_to "LE WAGON", wagonposts_index_path %></li>
+  </ul>
 
   </div>
-
   <% end %>
-  <!-- Dropdown list appearing on mobile only -->
-
 </div>
 
