@@ -8,14 +8,10 @@
         </div>
         <% @hackernews.each do |h| %>
           <div class="card-article">
-
             <%= link_to("#{h.source}") do %>
-
               <div class="card-article__title">
                 <%= h.title %>
-              </div>
               <p><% h.source %></p>
-
             <% end %>
             <div class="card-article__actions">
               <div class="post-upvote">
