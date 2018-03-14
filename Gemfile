@@ -48,7 +48,6 @@ gem 'httparty', '0.13.5'
 gem 'rest-client'
 # API wrappers - Use Octokit for Github API - Use RubyHackernews for HN - Use Github for Github
 gem "octokit", "~> 4.0"
-gem 'ruby-hackernews', '~> 1.4'
 gem "github_api"
 # Use Multi-XML for XML parsing
 
