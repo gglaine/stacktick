@@ -9,13 +9,14 @@
     <h5><%= current_user.username %></h5>
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
+        <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+        <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
         <div class="dropdown">
           <%= current_user.username %>
             <%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
             <% end %>
-          <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
-<%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
@@ -37,6 +38,7 @@
       </div>
 
   <% else %>
+
     <!-- if user is not signed in -->
   <div class="navbar-wagon-item">
     <div class="navbar-signup">
@@ -50,7 +52,7 @@
     <li><%= link_to "HACKERNEWS", hackernews_path %></li>
     <li><%= link_to "TECHCRUNCH", techcrunches_path %></li>
     <li><%= link_to "TECHMEME", techmemes_path  %></li>
-    <li><%= link_to "LE WAGON", wagonposts_index_path %></li>
+    <li><%= link_to "LE WAGON", lewagon_path %></li>
   </ul>
 
   </div>

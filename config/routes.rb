@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'techmemes', to: 'techmemes#index'
   get 'hackernews', to: 'hackernews#index'
   get 'techcrunches', to: 'techcrunches#index'
-  get 'lewagon/blog', to: 'wagonsposts#index'
+  get 'lewagon', to: 'wagonsposts#index'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

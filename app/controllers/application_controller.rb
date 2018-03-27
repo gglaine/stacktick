@@ -3,27 +3,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # Define the Entry object
-  class Entry
-    def initialize(title)
-      @title = title
-
-    end
-    attr_reader :title
-  end
-
-  def scrape
-    doc = Nokogiri::HTML(open("https://news.ycombinator.com/"))
-
-    entries = doc.css('.athing')
-    @entriesArray = []
-    entries.each do |entry|
-      title = entry.css('.title>.storylink').text
-      # subtext = entry.css('.subtext').text
-      @entriesArray << Entry.new(title)
-    end
-
-    render 'scrape'
+  def after_sign_in_path_for(resource)
+    request.env['omniauth.origin'] || root_path
   end
 
   protected
